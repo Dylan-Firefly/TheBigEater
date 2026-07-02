@@ -1721,6 +1721,7 @@ GameObject:
   m_Component:
   - component: {fileID: 143292356941893580}
   - component: {fileID: 8570323942205896314}
+  - component: {fileID: 7131259136483052144}
   m_Layer: 0
   m_Name: DanmakuContent
   m_TagString: Untagged
@@ -1777,6 +1778,106 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &7131259136483052144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8581176143754599717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a4d9cc357c4648c4a836ed714ab64501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DanmakuFeedController
+  contentRoot: {fileID: 143292356941893580}
+  itemPrefab: {fileID: 0}
+  backgroundSprite: {fileID: 0}
+  fontAsset: {fileID: 11400000, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
+  filterBlockedMessages: 1
+  loopMessages: 1
+  messages:
+  - id: demo_001
+    sprite: {fileID: 0}
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    useNativeSize: 1
+    sizeOverride: {x: 0, y: 0}
+    scale: 1
+    text: 主播下次可以吃马竞定食吗
+    enabled: 1
+    blocked: 0
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - id: demo_002
+    sprite: {fileID: 0}
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    useNativeSize: 1
+    sizeOverride: {x: 0, y: 0}
+    scale: 1
+    text: 一口秒了就刷嘉年华！
+    enabled: 1
+    blocked: 0
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - id: demo_003
+    sprite: {fileID: 0}
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    useNativeSize: 1
+    sizeOverride: {x: 0, y: 0}
+    scale: 1
+    text: 我要看三口一头猪
+    enabled: 1
+    blocked: 0
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - id: demo_004
+    sprite: {fileID: 0}
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    useNativeSize: 1
+    sizeOverride: {x: 0, y: 0}
+    scale: 1
+    text: 你们都是假粉丝我和主播才是真朋友
+    enabled: 1
+    blocked: 0
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - id: demo_005
+    sprite: {fileID: 0}
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    useNativeSize: 1
+    sizeOverride: {x: 0, y: 0}
+    scale: 1
+    text: 这桌看起来也太香了吧
+    enabled: 1
+    blocked: 0
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  - id: demo_006
+    sprite: {fileID: 0}
+    tintColor: {r: 1, g: 1, b: 1, a: 1}
+    useNativeSize: 1
+    sizeOverride: {x: 0, y: 0}
+    scale: 1
+    text: 主播别停，继续吃！
+    enabled: 1
+    blocked: 0
+    textColor: {r: 1, g: 1, b: 1, a: 1}
+  playOnAwake: 1
+  spawnIntervalRange: {x: 1.15, y: 1.85}
+  firstSpawnDelay: 0.2
+  prewarmCount: 6
+  maxVisibleItems: 4
+  itemHeight: 44
+  verticalSpacing: 14
+  leftPadding: 22
+  bottomPadding: 10
+  minItemWidth: 210
+  maxItemWidth: 500
+  horizontalTextPadding: 28
+  textPadding: {x: 22, y: 4, z: 22, w: 4}
+  fitImagesToMaxSize: 1
+  maxImageSize: {x: 500, y: 90}
+  defaultImageScale: 1
+  scrollSmoothTime: 0.16
+  spawnYOffset: -16
+  fadeSpeed: 7
+  defaultBackgroundColor: {r: 0.72, g: 0.33, b: 0.95, a: 0.88}
+  fontSize: 24
 --- !u!1 &8602563437512868066
 GameObject:
   m_ObjectHideFlags: 0
