@@ -233,6 +233,38 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: -1820, y: -980}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &180420813 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3494691065967706465, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+  m_PrefabInstance: {fileID: 6204599382614933509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &180420815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180420813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e193dafc87914439990713767100ec70, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIFountainFxEmitter
+  fxParent: {fileID: 0}
+  itemPrefab: {fileID: 0}
+  triggerButton: {fileID: 0}
+  bindButtonOnAwake: 1
+  prewarmCount: 24
+  sprayOnClick: 1
+  sprayDuration: 0.28
+  particlesPerSecond: 34
+  minBurstCount: 5
+  maxBurstCount: 9
+  spawnJitter: {x: 20, y: 8}
+  velocityXRange: {x: -55, y: 55}
+  velocityYRange: {x: 160, y: 285}
+  acceleration: {x: 0, y: -135}
+  entries: []
 --- !u!1 &363188078
 GameObject:
   m_ObjectHideFlags: 0
@@ -655,6 +687,33 @@ Transform:
   - {fileID: 1852929401}
   m_Father: {fileID: 1240123821}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809387490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8407925739418713358, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+  m_PrefabInstance: {fileID: 6204599382614933509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &809387494
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809387490}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f735a9bcf17715c47aea1c75a4966ee2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1089382107 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3613853898363294118, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
@@ -923,6 +982,33 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1656067767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2977921396708432572, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+  m_PrefabInstance: {fileID: 6204599382614933509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1656067771
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1656067767}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: afc96f172ded0cf4b9e03ef441e495c6, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1682425647
 GameObject:
   m_ObjectHideFlags: 0
@@ -1054,7 +1140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1852929401
 Transform:
   m_ObjectHideFlags: 0
@@ -1096,7 +1182,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: aa32f473c0485804db00ee0d851b32f1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6160,6 +6246,10 @@ PrefabInstance:
       propertyPath: messages.Array.data[4].sprite
       value: 
       objectReference: {fileID: -541405201693800770, guid: 46322314b6640bd428caa0ab577f0368, type: 3}
+    - target: {fileID: 7378963742314646927, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1094
+      objectReference: {fileID: 0}
     - target: {fileID: 8602563437512868066, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
       propertyPath: m_Name
       value: StreamUI
@@ -6181,6 +6271,15 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1176368432}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8407925739418713358, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 809387494}
+    - targetCorrespondingSourceObject: {fileID: 2977921396708432572, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1656067771}
+    - targetCorrespondingSourceObject: {fileID: 3494691065967706465, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 180420815}
     - targetCorrespondingSourceObject: {fileID: 2358836123701747072, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6204599382614933514}
