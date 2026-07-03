@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 688557df51afe134085b9890b7bc24bc
+guid: bf2086a011ebb194d9fafdad1504e4e3
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5260210390400956582
-    second: "\u8089\u714E\u719F_0"
+      213: -3098752449450135958
+    second: Yolk_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u8089\u714E\u719F_0"
+      name: Yolk_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 1213
+        y: 529
+        width: 252
+        height: 246
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a57055c058afff6b0800000000000000
-      internalID: -5260210390400956582
+      spriteID: a6e27aba0150ff4d0800000000000000
+      internalID: -3098752449450135958
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u8089\u714E\u719F_0": -5260210390400956582
+      Yolk_0: -3098752449450135958
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

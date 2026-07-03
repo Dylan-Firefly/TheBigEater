@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e43cbbefcfc87d4cb07a654b8505e3a
+guid: 6d930ef8f74f9a54aba0da5eac350abf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1182280875491486760
-    second: "\u76F4\u64AD\u95F4_0"
+      213: 4495422397181781673
+    second: Bean_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,12 +98,34 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Bean_0
+      rect:
+        serializedVersion: 2
+        x: 1610
+        y: 73
+        width: 147
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6ea5b3ad2f26e30800000000000000
+      internalID: 4495422397181781673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3dedb774ed3cba74bb85ee8707451908
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -113,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u76F4\u64AD\u95F4_0": 1182280875491486760
+      Bean_0: 4495422397181781673
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

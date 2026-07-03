@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4e43cbbefcfc87d4cb07a654b8505e3a
+guid: d72398e67963acc44bc73c32141d7eae
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1182280875491486760
-    second: "\u76F4\u64AD\u95F4_0"
+      213: -8938819534478884857
+    second: Plate_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -98,12 +98,34 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Plate_0
+      rect:
+        serializedVersion: 2
+        x: 677
+        y: 251
+        width: 626
+        height: 299
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70040184efee2f380800000000000000
+      internalID: -8938819534478884857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 3dedb774ed3cba74bb85ee8707451908
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -113,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u76F4\u64AD\u95F4_0": 1182280875491486760
+      Plate_0: -8938819534478884857
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

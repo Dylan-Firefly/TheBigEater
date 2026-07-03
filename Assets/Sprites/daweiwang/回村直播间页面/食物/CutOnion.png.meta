@@ -1,0 +1,556 @@
+fileFormatVersion: 2
+guid: 68949e8a68a1aae44ac8daf9dd31c0b0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7553434852870291856
+    second: CutOnion_0
+  - first:
+      213: -7546396513565758248
+    second: CutOnion_1
+  - first:
+      213: 6600628882372008448
+    second: CutOnion_2
+  - first:
+      213: 2781127215915690393
+    second: CutOnion_3
+  - first:
+      213: -1782190785425087114
+    second: CutOnion_4
+  - first:
+      213: 7870770726687238404
+    second: CutOnion_5
+  - first:
+      213: 7604113193271822074
+    second: CutOnion_6
+  - first:
+      213: -3450347334873435518
+    second: CutOnion_7
+  - first:
+      213: 3295821049596033445
+    second: CutOnion_8
+  - first:
+      213: 1937683721553641390
+    second: CutOnion_9
+  - first:
+      213: 575425047401887423
+    second: CutOnion_10
+  - first:
+      213: 2790063299858151046
+    second: CutOnion_11
+  - first:
+      213: 6667426953290305292
+    second: CutOnion_12
+  - first:
+      213: 2109968537875053389
+    second: CutOnion_13
+  - first:
+      213: 4949602923834825578
+    second: CutOnion_14
+  - first:
+      213: -2773272522512174108
+    second: CutOnion_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CutOnion_0
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 749
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e7c98650fcc2790800000000000000
+      internalID: -7553434852870291856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_1
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 709
+        width: 18
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dcaaaa7a50d54790800000000000000
+      internalID: -7546396513565758248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_2
+      rect:
+        serializedVersion: 2
+        x: 1354
+        y: 717
+        width: 21
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00a97f33ff42a9b50800000000000000
+      internalID: 6600628882372008448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_3
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 719
+        width: 17
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99963d3c77c889620800000000000000
+      internalID: 2781127215915690393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_4
+      rect:
+        serializedVersion: 2
+        x: 1270
+        y: 675
+        width: 19
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67563c05ce26447e0800000000000000
+      internalID: -1782190785425087114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_5
+      rect:
+        serializedVersion: 2
+        x: 1411
+        y: 677
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4096cb856489a3d60800000000000000
+      internalID: 7870770726687238404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_6
+      rect:
+        serializedVersion: 2
+        x: 1247
+        y: 655
+        width: 10
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af604d439ac378960800000000000000
+      internalID: 7604113193271822074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_7
+      rect:
+        serializedVersion: 2
+        x: 1340
+        y: 649
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28237213167ed10d0800000000000000
+      internalID: -3450347334873435518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_8
+      rect:
+        serializedVersion: 2
+        x: 1380
+        y: 643
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a93d6858cb1dbd20800000000000000
+      internalID: 3295821049596033445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_9
+      rect:
+        serializedVersion: 2
+        x: 1288
+        y: 636
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaff246141904ea10800000000000000
+      internalID: 1937683721553641390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_10
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 629
+        width: 17
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb6704928025cf700800000000000000
+      internalID: 575425047401887423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_11
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 608
+        width: 13
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68636e0f9cb48b620800000000000000
+      internalID: 2790063299858151046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_12
+      rect:
+        serializedVersion: 2
+        x: 1391
+        y: 593
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c0fcbbc0d75778c50800000000000000
+      internalID: 6667426953290305292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_13
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 583
+        width: 17
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4bfa43c43d184d10800000000000000
+      internalID: 2109968537875053389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_14
+      rect:
+        serializedVersion: 2
+        x: 1274
+        y: 574
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6bd86692a580b440800000000000000
+      internalID: 4949602923834825578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_15
+      rect:
+        serializedVersion: 2
+        x: 1337
+        y: 555
+        width: 18
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e37f4e855b5389d0800000000000000
+      internalID: -2773272522512174108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutOnion_16
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 554
+        width: 211
+        height: 206
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1efef9793e0a3f645ac28e42b609f57f
+      internalID: -71696100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 487b9abb084400b42ba1bcd170bdc8ba
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      CutOnion_0: -7553434852870291856
+      CutOnion_1: -7546396513565758248
+      CutOnion_10: 575425047401887423
+      CutOnion_11: 2790063299858151046
+      CutOnion_12: 6667426953290305292
+      CutOnion_13: 2109968537875053389
+      CutOnion_14: 4949602923834825578
+      CutOnion_15: -2773272522512174108
+      CutOnion_16: -71696100
+      CutOnion_2: 6600628882372008448
+      CutOnion_3: 2781127215915690393
+      CutOnion_4: -1782190785425087114
+      CutOnion_5: 7870770726687238404
+      CutOnion_6: 7604113193271822074
+      CutOnion_7: -3450347334873435518
+      CutOnion_8: 3295821049596033445
+      CutOnion_9: 1937683721553641390
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

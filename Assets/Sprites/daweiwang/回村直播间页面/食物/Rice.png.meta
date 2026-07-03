@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b2482877ec7025543b24f8f280de6942
+guid: 94c3d7d00df7d2145b70f57a123b44ce
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8886731545310748213
-    second: "\u8471\u82B1_0"
+      213: -3491839630117010820
+    second: Rice_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u8471\u82B1_0"
+      name: Rice_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1920
-        height: 1080
+        x: 1287
+        y: 58
+        width: 227
+        height: 203
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53e518ca143045b70800000000000000
-      internalID: 8886731545310748213
+      spriteID: c728e326b5e7a8fc0800000000000000
+      internalID: -3491839630117010820
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u8471\u82B1_0": 8886731545310748213
+      Rice_0: -3491839630117010820
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

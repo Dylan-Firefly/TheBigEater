@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: d98a5288d1b9eae48948f03466915ace
+guid: 7f3ca4d41f870574d973f86f71aa0d90
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1865135789356401697
-    second: "\u86CB\u6DB2_0"
+      213: -5859083586626064994
+    second: Carrot_0
+  - first:
+      213: -2094157912208876536
+    second: Carrot_1
+  - first:
+      213: -830467699528618894
+    second: Carrot_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u86CB\u6DB2_0"
+      name: Carrot_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1440
-        height: 810
+        x: 1131
+        y: 938
+        width: 56
+        height: 97
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +121,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 124c4765e1b42e910800000000000000
-      internalID: 1865135789356401697
+      spriteID: e9de4dd458a50bea0800000000000000
+      internalID: -5859083586626064994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_1
+      rect:
+        serializedVersion: 2
+        x: 1186
+        y: 1010
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80c5733697e00f2e0800000000000000
+      internalID: -2094157912208876536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Carrot_2
+      rect:
+        serializedVersion: 2
+        x: 1100
+        y: 931
+        width: 26
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27c292cf6069974f0800000000000000
+      internalID: -830467699528618894
       vertices: []
       indices: 
       edges: []
@@ -135,7 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u86CB\u6DB2_0": 1865135789356401697
+      Carrot_0: -5859083586626064994
+      Carrot_1: -2094157912208876536
+      Carrot_2: -830467699528618894
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
