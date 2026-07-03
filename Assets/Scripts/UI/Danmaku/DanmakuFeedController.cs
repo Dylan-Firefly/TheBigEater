@@ -1,7 +1,21 @@
+using System;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
+public enum DanmakuTone
+{
+    Normal,
+    Negative
+}
+
+public enum DanmakuRecycleReason
+{
+    Expired,
+    Muted,
+    Cleared
+}
 
 public class DanmakuFeedController : MonoBehaviour
 {
@@ -9,6 +23,7 @@ public class DanmakuFeedController : MonoBehaviour
     public class DanmakuMessage
     {
         public string id;
+        public DanmakuTone tone = DanmakuTone.Normal;
         public Sprite sprite;
         public Color tintColor = Color.white;
         public bool useNativeSize = true;
@@ -18,11 +33,13 @@ public class DanmakuFeedController : MonoBehaviour
         public bool enabled = true;
         public bool blocked;
         public Color textColor = Color.white;
+
+        public bool IsNegative => tone == DanmakuTone.Negative;
     }
 
     private class ActiveDanmaku
     {
-        public string messageId;
+        public DanmakuMessage message;
         public DanmakuItemView view;
         public float height;
         public float currentY;
@@ -81,6 +98,14 @@ public class DanmakuFeedController : MonoBehaviour
     private int nextMessageIndex;
     private float spawnTimer;
     private bool isPlaying;
+    private bool isMovementPaused;
+
+    public event Action<DanmakuItemView, DanmakuMessage> DanmakuSpawned;
+    public event Action<DanmakuItemView, DanmakuMessage> NegativeDanmakuSpawned;
+    public event Action<DanmakuItemView, DanmakuMessage, DanmakuRecycleReason> DanmakuRecycled;
+    public event Action<DanmakuItemView, DanmakuMessage> DanmakuClicked;
+    public event Action<DanmakuItemView, DanmakuMessage> DanmakuPointerEntered;
+    public event Action<DanmakuItemView, DanmakuMessage> DanmakuPointerExited;
 
     private void Awake()
     {
@@ -100,7 +125,10 @@ public class DanmakuFeedController : MonoBehaviour
 
     private void Update()
     {
-        UpdateActiveItems();
+        if (!isMovementPaused)
+        {
+            UpdateActiveItems();
+        }
 
         if (!isPlaying)
         {
@@ -111,7 +139,7 @@ public class DanmakuFeedController : MonoBehaviour
         if (spawnTimer <= 0f)
         {
             EmitNext();
-            spawnTimer = Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
+            spawnTimer = UnityEngine.Random.Range(spawnIntervalRange.x, spawnIntervalRange.y);
         }
     }
 
@@ -141,10 +169,11 @@ public class DanmakuFeedController : MonoBehaviour
             fitImagesToMaxSize ? maxImageSize : Vector2.zero);
         view.SetVisible(true);
         view.SetAlpha(0f);
+        view.BindMessage(message);
 
         ActiveDanmaku active = new ActiveDanmaku
         {
-            messageId = message.id,
+            message = message,
             view = view,
             height = itemSize.y,
             currentY = bottomPadding + spawnYOffset,
@@ -156,16 +185,28 @@ public class DanmakuFeedController : MonoBehaviour
         RefreshTargets();
         view.SetPosition(new Vector2(leftPadding, active.currentY));
         TrimOverflow();
+        DanmakuSpawned?.Invoke(view, message);
+        if (message.IsNegative)
+        {
+            NegativeDanmakuSpawned?.Invoke(view, message);
+        }
     }
 
     public void Play()
     {
         isPlaying = true;
+        isMovementPaused = false;
     }
 
-    public void Pause()
+    public void Pause(bool pauseMovement = false)
     {
         isPlaying = false;
+        isMovementPaused = pauseMovement;
+    }
+
+    public void SetMovementPaused(bool paused)
+    {
+        isMovementPaused = paused;
     }
 
     public void AddMessage(string id, string text)
@@ -179,6 +220,7 @@ public class DanmakuFeedController : MonoBehaviour
         {
             id = id,
             text = text,
+            tone = DanmakuTone.Normal,
             enabled = true,
             blocked = false,
             textColor = Color.white
@@ -196,6 +238,7 @@ public class DanmakuFeedController : MonoBehaviour
         {
             id = id,
             sprite = sprite,
+            tone = DanmakuTone.Normal,
             tintColor = Color.white,
             useNativeSize = true,
             scale = 1f,
@@ -221,7 +264,27 @@ public class DanmakuFeedController : MonoBehaviour
 
         if (removeVisibleItems)
         {
-            RemoveVisibleItemsById(id);
+            RemoveVisibleItemsById(id, DanmakuRecycleReason.Muted);
+        }
+    }
+
+    public void RemoveVisibleDanmaku(DanmakuItemView view, DanmakuRecycleReason reason = DanmakuRecycleReason.Muted)
+    {
+        if (view == null)
+        {
+            return;
+        }
+
+        for (int i = activeItems.Count - 1; i >= 0; i--)
+        {
+            if (activeItems[i].view == view)
+            {
+                ActiveDanmaku active = activeItems[i];
+                activeItems.RemoveAt(i);
+                Recycle(active, reason);
+                RefreshTargets();
+                return;
+            }
         }
     }
 
@@ -229,7 +292,7 @@ public class DanmakuFeedController : MonoBehaviour
     {
         for (int i = activeItems.Count - 1; i >= 0; i--)
         {
-            Recycle(activeItems[i]);
+            Recycle(activeItems[i], DanmakuRecycleReason.Cleared);
         }
 
         activeItems.Clear();
@@ -303,18 +366,18 @@ public class DanmakuFeedController : MonoBehaviour
         {
             ActiveDanmaku oldest = activeItems[activeItems.Count - 1];
             activeItems.RemoveAt(activeItems.Count - 1);
-            Recycle(oldest);
+            Recycle(oldest, DanmakuRecycleReason.Expired);
         }
     }
 
-    private void RemoveVisibleItemsById(string id)
+    private void RemoveVisibleItemsById(string id, DanmakuRecycleReason reason)
     {
         bool removedAny = false;
         for (int i = activeItems.Count - 1; i >= 0; i--)
         {
-            if (activeItems[i].messageId == id)
+            if (activeItems[i].message != null && activeItems[i].message.id == id)
             {
-                Recycle(activeItems[i]);
+                Recycle(activeItems[i], reason);
                 activeItems.RemoveAt(i);
                 removedAny = true;
             }
@@ -375,6 +438,9 @@ public class DanmakuFeedController : MonoBehaviour
             item = itemObject.AddComponent<DanmakuItemView>();
         }
 
+        item.PointerEntered += HandleItemPointerEntered;
+        item.PointerExited += HandleItemPointerExited;
+        item.Clicked += HandleItemClicked;
         item.ConfigureRuntime(backgroundSprite, defaultBackgroundColor, fontAsset, fontSize, textPadding);
         item.RectTransform.anchorMin = new Vector2(0f, 0f);
         item.RectTransform.anchorMax = new Vector2(0f, 0f);
@@ -382,15 +448,42 @@ public class DanmakuFeedController : MonoBehaviour
         return item;
     }
 
-    private void Recycle(ActiveDanmaku active)
+    private void Recycle(ActiveDanmaku active, DanmakuRecycleReason reason)
     {
         if (active == null || active.view == null)
         {
             return;
         }
 
+        DanmakuMessage message = active.message;
+        DanmakuRecycled?.Invoke(active.view, message, reason);
+        active.view.ClearBinding();
         active.view.SetVisible(false);
         pool.Enqueue(active.view);
+    }
+
+    private void HandleItemPointerEntered(DanmakuItemView item)
+    {
+        if (item != null && item.CurrentMessage != null)
+        {
+            DanmakuPointerEntered?.Invoke(item, item.CurrentMessage);
+        }
+    }
+
+    private void HandleItemPointerExited(DanmakuItemView item)
+    {
+        if (item != null && item.CurrentMessage != null)
+        {
+            DanmakuPointerExited?.Invoke(item, item.CurrentMessage);
+        }
+    }
+
+    private void HandleItemClicked(DanmakuItemView item)
+    {
+        if (item != null && item.CurrentMessage != null)
+        {
+            DanmakuClicked?.Invoke(item, item.CurrentMessage);
+        }
     }
 
     private void ConfigureContentRoot()

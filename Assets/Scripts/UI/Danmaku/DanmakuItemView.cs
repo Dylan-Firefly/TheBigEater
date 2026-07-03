@@ -1,8 +1,10 @@
+using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class DanmakuItemView : MonoBehaviour
+public class DanmakuItemView : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler
 {
     [SerializeField] private CanvasGroup canvasGroup;
     [SerializeField] private Image background;
@@ -11,12 +13,53 @@ public class DanmakuItemView : MonoBehaviour
 
     private RectTransform rectTransform;
 
+    public DanmakuFeedController.DanmakuMessage CurrentMessage { get; private set; }
+    public bool HasMessage => CurrentMessage != null;
+
+    public event Action<DanmakuItemView> PointerEntered;
+    public event Action<DanmakuItemView> PointerExited;
+    public event Action<DanmakuItemView> Clicked;
+
     public RectTransform RectTransform
     {
         get
         {
             EnsureReferences();
             return rectTransform;
+        }
+    }
+
+    public void BindMessage(DanmakuFeedController.DanmakuMessage message)
+    {
+        CurrentMessage = message;
+    }
+
+    public void ClearBinding()
+    {
+        CurrentMessage = null;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        if (CurrentMessage != null)
+        {
+            PointerEntered?.Invoke(this);
+        }
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        if (CurrentMessage != null)
+        {
+            PointerExited?.Invoke(this);
+        }
+    }
+
+    public void OnPointerClick(PointerEventData eventData)
+    {
+        if (CurrentMessage != null)
+        {
+            Clicked?.Invoke(this);
         }
     }
 
@@ -39,7 +82,7 @@ public class DanmakuItemView : MonoBehaviour
             background.sprite = backgroundSprite;
             background.color = backgroundColor;
             background.type = backgroundSprite != null ? Image.Type.Sliced : Image.Type.Simple;
-            background.raycastTarget = false;
+            background.raycastTarget = true;
         }
 
         if (label != null)
@@ -153,8 +196,8 @@ public class DanmakuItemView : MonoBehaviour
             }
         }
 
-        canvasGroup.interactable = false;
-        canvasGroup.blocksRaycasts = false;
+        canvasGroup.interactable = true;
+        canvasGroup.blocksRaycasts = true;
 
         if (background == null)
         {
@@ -216,7 +259,7 @@ public class DanmakuItemView : MonoBehaviour
             background.color = tintColor;
             background.type = Image.Type.Simple;
             background.preserveAspect = true;
-            background.raycastTarget = false;
+            background.raycastTarget = true;
         }
 
         Vector2 size = ResolveSpriteSize(sprite, fallbackHeight, useNativeSize, sizeOverride);
