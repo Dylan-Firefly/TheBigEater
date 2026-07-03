@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 9360a92becc886644bee5e8228c11ac3
+guid: d75dd3156f97caf4faaab9adf5f65d33
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5562909971521784292
-    second: "\u8089_0"
+      213: 5914899476318505710
+    second: Danmaku1_0
+  - first:
+      213: 7450615193121219624
+    second: Danmaku1_1
+  - first:
+      213: 7764989789071240660
+    second: Danmaku1_2
+  - first:
+      213: 2376818278594644132
+    second: Danmaku1_3
+  - first:
+      213: -1019688108688350599
+    second: Danmaku1_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +63,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "\u8089_0"
+      name: Danmaku1_0
       rect:
         serializedVersion: 2
-        x: 1730
-        y: 679
-        width: 165
-        height: 130
+        x: 75
+        y: 472
+        width: 255
+        height: 62
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +127,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4e9c802452d633d40800000000000000
-      internalID: 5562909971521784292
+      spriteID: eeacb183cb1f51250800000000000000
+      internalID: 5914899476318505710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Danmaku1_1
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 391
+        width: 351
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8246e180b07e56760800000000000000
+      internalID: 7450615193121219624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Danmaku1_2
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 309
+        width: 348
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dd602e8219c2cb60800000000000000
+      internalID: 7764989789071240660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Danmaku1_3
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 229
+        width: 268
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a80a47a1a72cf020800000000000000
+      internalID: 2376818278594644132
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Danmaku1_4
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 148
+        width: 460
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972e0f3511759d1f0800000000000000
+      internalID: -1019688108688350599
       vertices: []
       indices: 
       edges: []
@@ -135,7 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      "\u8089_0": 5562909971521784292
+      Danmaku1_0: 5914899476318505710
+      Danmaku1_1: 7450615193121219624
+      Danmaku1_2: 7764989789071240660
+      Danmaku1_3: 2376818278594644132
+      Danmaku1_4: -1019688108688350599
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

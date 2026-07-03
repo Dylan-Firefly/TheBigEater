@@ -1,88 +1,76 @@
 fileFormatVersion: 2
-guid: 670ff0f54a3a33f4e884fbc6499d4ba2
+guid: f0ffab6c92df89c45acab3b7c46d777f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5328104982336953044
-    second: oil_0
+      213: -9115206142620582841
+    second: StreamingUI_0
   - first:
-      213: 7776492450180799568
-    second: oil_1
+      213: -5815559529314950383
+    second: StreamingUI_1
   - first:
-      213: 1334641247048574048
-    second: oil_2
+      213: 8596493442229424021
+    second: StreamingUI_2
   - first:
-      213: -9199997698424132929
-    second: oil_3
+      213: 7652378800223256554
+    second: StreamingUI_3
   - first:
-      213: -7134955415792401692
-    second: oil_4
+      213: 760269413013621247
+    second: StreamingUI_4
   - first:
-      213: -2265604288953831398
-    second: oil_5
+      213: 3098157034782916128
+    second: StreamingUI_5
   - first:
-      213: 6925176251070147507
-    second: oil_6
+      213: 3352264085704136671
+    second: StreamingUI_6
   - first:
-      213: 1277784016133181942
-    second: oil_7
+      213: 2809747448863501277
+    second: StreamingUI_7
   - first:
-      213: -3719812387555274994
-    second: oil_8
+      213: 7854210617633096037
+    second: StreamingUI_8
   - first:
-      213: 9051666134860364728
-    second: oil_9
+      213: 1151375798118830256
+    second: StreamingUI_9
   - first:
-      213: -8590870181926920343
-    second: oil_10
+      213: -2913407921019310931
+    second: StreamingUI_10
   - first:
-      213: -765428978554614418
-    second: oil_11
+      213: -671954441354758149
+    second: StreamingUI_11
   - first:
-      213: -1004362847731836845
-    second: oil_12
+      213: -4644708426540764608
+    second: StreamingUI_12
   - first:
-      213: 3705690523555540187
-    second: oil_13
+      213: -8704995593683760717
+    second: StreamingUI_13
   - first:
-      213: 5823571842508805180
-    second: oil_14
+      213: 7577291513831310516
+    second: StreamingUI_14
   - first:
-      213: -2856889133618552052
-    second: oil_15
+      213: 6680359163098805967
+    second: StreamingUI_15
   - first:
-      213: 779145487534029883
-    second: oil_16
+      213: 5193525946438136781
+    second: StreamingUI_16
   - first:
-      213: 4839160746537005584
-    second: oil_17
+      213: 7350854809619391028
+    second: StreamingUI_17
   - first:
-      213: 1672605119767210793
-    second: oil_18
+      213: -771788507936999721
+    second: StreamingUI_18
   - first:
-      213: -1061559821262443868
-    second: oil_19
+      213: -810948226638961767
+    second: StreamingUI_19
   - first:
-      213: -8462261873144842313
-    second: oil_20
+      213: -3118804164818975748
+    second: StreamingUI_20
   - first:
-      213: -4695772102512690295
-    second: oil_21
+      213: 2178043058680346262
+    second: StreamingUI_21
   - first:
-      213: -8287475012269636802
-    second: oil_22
-  - first:
-      213: -5928879030291081356
-    second: oil_23
-  - first:
-      213: -1626585319426788888
-    second: oil_24
-  - first:
-      213: 1315916512198672714
-    second: oil_25
-  - first:
-      213: -1645490609811207897
-    second: oil_26
+      213: -4828659772227622029
+    second: StreamingUI_22
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -129,7 +117,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 64
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -178,13 +166,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: oil_0
+      name: StreamingUI_0
       rect:
         serializedVersion: 2
-        x: 742
-        y: 478
-        width: 11
-        height: 11
+        x: 48
+        y: 916
+        width: 521
+        height: 128
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,20 +181,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c2521d18fb4ce06b0800000000000000
-      internalID: -5328104982336953044
+      spriteID: 74c34a6ce48408180800000000000000
+      internalID: -9115206142620582841
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_1
+      name: StreamingUI_1
       rect:
         serializedVersion: 2
-        x: 810
-        y: 483
-        width: 26
-        height: 29
+        x: 1434
+        y: 939
+        width: 247
+        height: 84
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +203,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 05c988b8ea6abeb60800000000000000
-      internalID: 7776492450180799568
+      spriteID: 1136b059b6bfa4fa0800000000000000
+      internalID: -5815559529314950383
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_2
+      name: StreamingUI_2
       rect:
         serializedVersion: 2
-        x: 900
-        y: 473
-        width: 20
-        height: 20
+        x: 1687
+        y: 944
+        width: 115
+        height: 72
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,20 +225,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0642ae89429958210800000000000000
-      internalID: 1334641247048574048
+      spriteID: 59f4f025d31ec4770800000000000000
+      internalID: 8596493442229424021
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_3
+      name: StreamingUI_3
       rect:
         serializedVersion: 2
-        x: 703
-        y: 460
-        width: 16
-        height: 16
+        x: 1812
+        y: 938
+        width: 88
+        height: 88
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -259,85 +247,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fbaa40346da035080800000000000000
-      internalID: -9199997698424132929
+      spriteID: aef790a89f5b23a60800000000000000
+      internalID: 7652378800223256554
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_4
+      name: StreamingUI_4
       rect:
         serializedVersion: 2
-        x: 729
-        y: 446
-        width: 14
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4e2c1791adb8bfc90800000000000000
-      internalID: -7134955415792401692
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_5
-      rect:
-        serializedVersion: 2
-        x: 875
-        y: 455
-        width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a103e4327e4fe80e0800000000000000
-      internalID: -2265604288953831398
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_6
-      rect:
-        serializedVersion: 2
-        x: 643
-        y: 397
-        width: 20
-        height: 20
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3bbe104fb1b2b1060800000000000000
-      internalID: 6925176251070147507
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_7
-      rect:
-        serializedVersion: 2
-        x: 683
-        y: 387
-        width: 48
+        x: 88
+        y: 861
+        width: 202
         height: 45
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -347,20 +269,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6f15a4deac99bb110800000000000000
-      internalID: 1277784016133181942
+      spriteID: ff98548c0050d8a00800000000000000
+      internalID: 760269413013621247
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_8
+      name: StreamingUI_5
       rect:
         serializedVersion: 2
-        x: 856
-        y: 397
-        width: 18
-        height: 19
+        x: 1712
+        y: 859
+        width: 208
+        height: 65
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,305 +291,173 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e0f8ba88752906cc0800000000000000
-      internalID: -3719812387555274994
+      spriteID: 02efc9c886ddefa20800000000000000
+      internalID: 3098157034782916128
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_9
+      name: StreamingUI_6
       rect:
         serializedVersion: 2
-        x: 934
-        y: 414
+        x: 58
+        y: 643
+        width: 607
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd7d1b5cc62a58e20800000000000000
+      internalID: 3352264085704136671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_7
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 564
+        width: 288
+        height: 72
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddba1160b6a3ef620800000000000000
+      internalID: 2809747448863501277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_8
+      rect:
+        serializedVersion: 2
+        x: 1754
+        y: 374
+        width: 54
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5614f1f71f2cffc60800000000000000
+      internalID: 7854210617633096037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_9
+      rect:
+        serializedVersion: 2
+        x: 1816
+        y: 365
+        width: 59
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b0dad920328aff00800000000000000
+      internalID: 1151375798118830256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_10
+      rect:
+        serializedVersion: 2
+        x: 1719
+        y: 269
+        width: 63
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: daca5d58eee7197d0800000000000000
+      internalID: -2913407921019310931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_11
+      rect:
+        serializedVersion: 2
+        x: 1821
+        y: 313
+        width: 42
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf7bdc9eefcbca6f0800000000000000
+      internalID: -671954441354758149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_12
+      rect:
+        serializedVersion: 2
+        x: 1695
+        y: 216
+        width: 39
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 04236c67b4eaa8fb0800000000000000
+      internalID: -4644708426540764608
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_13
+      rect:
+        serializedVersion: 2
+        x: 1708
+        y: 213
         width: 8
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 8bbf8c1546afd9d70800000000000000
-      internalID: 9051666134860364728
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_10
-      rect:
-        serializedVersion: 2
-        x: 655
-        y: 377
-        width: 6
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 96f10cef51917c880800000000000000
-      internalID: -8590870181926920343
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_11
-      rect:
-        serializedVersion: 2
-        x: 755
-        y: 371
-        width: 12
-        height: 12
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e6d46704666a065f0800000000000000
-      internalID: -765428978554614418
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_12
-      rect:
-        serializedVersion: 2
-        x: 897
-        y: 362
-        width: 22
-        height: 25
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3581853bf49cf02f0800000000000000
-      internalID: -1004362847731836845
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_13
-      rect:
-        serializedVersion: 2
-        x: 691
-        y: 322
-        width: 21
-        height: 23
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bdc2f08c5e14d6330800000000000000
-      internalID: 3705690523555540187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_14
-      rect:
-        serializedVersion: 2
-        x: 934
-        y: 315
-        width: 10
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c3454b47cbb71d050800000000000000
-      internalID: 5823571842508805180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_15
-      rect:
-        serializedVersion: 2
-        x: 670
-        y: 307
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c032efb287a4a58d0800000000000000
-      internalID: -2856889133618552052
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_16
-      rect:
-        serializedVersion: 2
-        x: 658
-        y: 283
-        width: 10
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b3c70dc51b410da00800000000000000
-      internalID: 779145487534029883
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_17
-      rect:
-        serializedVersion: 2
-        x: 864
-        y: 291
-        width: 8
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0123a5c5f07282340800000000000000
-      internalID: 4839160746537005584
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_18
-      rect:
-        serializedVersion: 2
-        x: 693
-        y: 265
-        width: 9
-        height: 10
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 92b693d9e79463710800000000000000
-      internalID: 1672605119767210793
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_19
-      rect:
-        serializedVersion: 2
-        x: 880
-        y: 267
-        width: 9
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4aa23d987f49441f0800000000000000
-      internalID: -1061559821262443868
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_20
-      rect:
-        serializedVersion: 2
-        x: 908
-        y: 263
-        width: 24
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7b7bede49a1009a80800000000000000
-      internalID: -8462261873144842313
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_21
-      rect:
-        serializedVersion: 2
-        x: 867
-        y: 245
-        width: 7
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98bba8be62445deb0800000000000000
-      internalID: -4695772102512690295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: oil_22
-      rect:
-        serializedVersion: 2
-        x: 679
-        y: 232
-        width: 6
         height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -677,20 +467,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e330eb0a269fcfc80800000000000000
-      internalID: -8287475012269636802
+      spriteID: 3b9832be0a4a13780800000000000000
+      internalID: -8704995593683760717
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_23
+      name: StreamingUI_14
       rect:
         serializedVersion: 2
-        x: 714
-        y: 213
-        width: 29
-        height: 26
+        x: 1723
+        y: 208
+        width: 8
+        height: 11
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -699,20 +489,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 477dc3b3fe368bda0800000000000000
-      internalID: -5928879030291081356
+      spriteID: 4b44f715c72f72960800000000000000
+      internalID: 7577291513831310516
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_24
+      name: StreamingUI_15
       rect:
         serializedVersion: 2
-        x: 765
-        y: 212
-        width: 9
-        height: 7
+        x: 1740
+        y: 180
+        width: 39
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -721,20 +511,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8e173be15453d69e0800000000000000
-      internalID: -1626585319426788888
+      spriteID: fc6b788c34765bc50800000000000000
+      internalID: 6680359163098805967
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_25
+      name: StreamingUI_16
       rect:
         serializedVersion: 2
-        x: 754
-        y: 186
-        width: 9
-        height: 7
+        x: 1801
+        y: 208
+        width: 70
+        height: 57
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -743,20 +533,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a414ca78813134210800000000000000
-      internalID: 1315916512198672714
+      spriteID: dc33831f45c131840800000000000000
+      internalID: 5193525946438136781
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: oil_26
+      name: StreamingUI_17
       rect:
         serializedVersion: 2
-        x: 792
-        y: 186
-        width: 24
-        height: 20
+        x: 1864
+        y: 183
+        width: 23
+        height: 33
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -765,8 +555,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 72946f0320b0a29e0800000000000000
-      internalID: -1645490609811207897
+      spriteID: 432e5dab08b730660800000000000000
+      internalID: 7350854809619391028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_18
+      rect:
+        serializedVersion: 2
+        x: 75
+        y: 42
+        width: 399
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d6bfaee07e0a45f0800000000000000
+      internalID: -771788507936999721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_19
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 44
+        width: 68
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 993a3fb62eeeeb4f0800000000000000
+      internalID: -810948226638961767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_20
+      rect:
+        serializedVersion: 2
+        x: 1653
+        y: 42
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf3c4ffd228c7b4d0800000000000000
+      internalID: -3118804164818975748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_21
+      rect:
+        serializedVersion: 2
+        x: 1738
+        y: 42
+        width: 86
+        height: 86
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696b5224f96f93e10800000000000000
+      internalID: 2178043058680346262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: StreamingUI_22
+      rect:
+        serializedVersion: 2
+        x: 1824
+        y: 42
+        width: 86
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37b672f35872dfcb0800000000000000
+      internalID: -4828659772227622029
       vertices: []
       indices: 
       edges: []
@@ -785,33 +685,29 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      oil_0: -5328104982336953044
-      oil_1: 7776492450180799568
-      oil_10: -8590870181926920343
-      oil_11: -765428978554614418
-      oil_12: -1004362847731836845
-      oil_13: 3705690523555540187
-      oil_14: 5823571842508805180
-      oil_15: -2856889133618552052
-      oil_16: 779145487534029883
-      oil_17: 4839160746537005584
-      oil_18: 1672605119767210793
-      oil_19: -1061559821262443868
-      oil_2: 1334641247048574048
-      oil_20: -8462261873144842313
-      oil_21: -4695772102512690295
-      oil_22: -8287475012269636802
-      oil_23: -5928879030291081356
-      oil_24: -1626585319426788888
-      oil_25: 1315916512198672714
-      oil_26: -1645490609811207897
-      oil_3: -9199997698424132929
-      oil_4: -7134955415792401692
-      oil_5: -2265604288953831398
-      oil_6: 6925176251070147507
-      oil_7: 1277784016133181942
-      oil_8: -3719812387555274994
-      oil_9: 9051666134860364728
+      StreamingUI_0: -9115206142620582841
+      StreamingUI_1: -5815559529314950383
+      StreamingUI_10: -2913407921019310931
+      StreamingUI_11: -671954441354758149
+      StreamingUI_12: -4644708426540764608
+      StreamingUI_13: -8704995593683760717
+      StreamingUI_14: 7577291513831310516
+      StreamingUI_15: 6680359163098805967
+      StreamingUI_16: 5193525946438136781
+      StreamingUI_17: 7350854809619391028
+      StreamingUI_18: -771788507936999721
+      StreamingUI_19: -810948226638961767
+      StreamingUI_2: 8596493442229424021
+      StreamingUI_20: -3118804164818975748
+      StreamingUI_21: 2178043058680346262
+      StreamingUI_22: -4828659772227622029
+      StreamingUI_3: 7652378800223256554
+      StreamingUI_4: 760269413013621247
+      StreamingUI_5: 3098157034782916128
+      StreamingUI_6: 3352264085704136671
+      StreamingUI_7: 2809747448863501277
+      StreamingUI_8: 7854210617633096037
+      StreamingUI_9: 1151375798118830256
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
