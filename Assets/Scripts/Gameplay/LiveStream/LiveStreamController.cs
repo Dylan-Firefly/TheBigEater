@@ -176,10 +176,10 @@ public class LiveStreamController : MonoBehaviour
     private void EnterEating(GameObject outputObject)
     {
         SetStage(LiveStreamStage.Eating);
-        SetRootActive(cookingRoot, false);
         SetRootActive(eatingRoot, true);
         cookingController?.StopCooking();
         eatingController?.BeginEating(outputObject);
+        SetRootActive(cookingRoot, false);
         timerController?.StartTimer(eatingDurationSeconds);
         Debug.Log("Live stream eating stage started.");
     }

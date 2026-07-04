@@ -9,6 +9,7 @@ public class WorldDraggable2D : MonoBehaviour, IBeginDragHandler, IDragHandler, 
     [SerializeField] private Camera dragCamera;
     [SerializeField] private LayerMask dropZoneMask = ~0;
     [SerializeField] private float dropProbeRadius = 0.05f;
+    [SerializeField] private bool alsoCheckDraggedColliderOverlap = true;
     [SerializeField] private bool returnToStartWhenRejected = true;
     [SerializeField] private bool keepOriginalParent = true;
 
@@ -97,6 +98,11 @@ public class WorldDraggable2D : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         RestoreSortingOrder();
 
         DropZone2D zone = FindDropZone(ScreenToWorld(eventData.position));
+        if (zone == null && alsoCheckDraggedColliderOverlap)
+        {
+            zone = FindDropZoneOverlappingDraggedCollider();
+        }
+
         if (zone != null && zone.TryDrop(this))
         {
             DroppedOnZone?.Invoke(this, zone);
@@ -153,6 +159,33 @@ public class WorldDraggable2D : MonoBehaviour, IBeginDragHandler, IDragHandler, 
         Collider2D[] hits = Physics2D.OverlapCircleAll(worldPosition, dropProbeRadius, dropZoneMask);
         for (int i = 0; i < hits.Length; i++)
         {
+            DropZone2D zone = hits[i].GetComponentInParent<DropZone2D>();
+            if (zone != null && zone.enabled && zone.gameObject.activeInHierarchy)
+            {
+                return zone;
+            }
+        }
+
+        return null;
+    }
+
+    private DropZone2D FindDropZoneOverlappingDraggedCollider()
+    {
+        CacheReferences();
+        if (ownCollider == null)
+        {
+            return null;
+        }
+
+        Bounds bounds = ownCollider.bounds;
+        Collider2D[] hits = Physics2D.OverlapBoxAll(bounds.center, bounds.size, transform.eulerAngles.z, dropZoneMask);
+        for (int i = 0; i < hits.Length; i++)
+        {
+            if (hits[i] == ownCollider)
+            {
+                continue;
+            }
+
             DropZone2D zone = hits[i].GetComponentInParent<DropZone2D>();
             if (zone != null && zone.enabled && zone.gameObject.activeInHierarchy)
             {

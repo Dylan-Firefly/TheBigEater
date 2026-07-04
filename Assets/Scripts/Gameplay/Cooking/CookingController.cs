@@ -9,6 +9,7 @@ public class CookingController : MonoBehaviour
     [SerializeField] private Transform cookPreviewPoint;
     [SerializeField] private List<IngredientItem> ingredients = new List<IngredientItem>();
     [SerializeField] private List<CookingRecipe> recipes = new List<CookingRecipe>();
+    [SerializeField] private bool autoFindIngredientsInChildren = true;
 
     [Header("Timing")]
     [SerializeField] private float cookedPreviewSeconds = 0.2f;
@@ -25,11 +26,13 @@ public class CookingController : MonoBehaviour
 
     private void Awake()
     {
+        RefreshIngredientListIfNeeded();
         HideRecipeOutputs();
     }
 
     public void BeginCooking()
     {
+        RefreshIngredientListIfNeeded();
         acceptedIngredientCounts.Clear();
         recipeCompleted = false;
         isCookingActive = true;
@@ -180,5 +183,15 @@ public class CookingController : MonoBehaviour
                 recipes[i].OutputObject.SetActive(false);
             }
         }
+    }
+
+    private void RefreshIngredientListIfNeeded()
+    {
+        if (!autoFindIngredientsInChildren || ingredients.Count > 0)
+        {
+            return;
+        }
+
+        ingredients.AddRange(GetComponentsInChildren<IngredientItem>(true));
     }
 }

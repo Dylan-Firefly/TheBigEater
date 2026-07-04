@@ -3502,7 +3502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::MouthDropZone
   acceptDrops: 1
   autoCreateTriggerCollider: 1
-  eatingController: {fileID: 0}
+  eatingController: {fileID: 1733370132}
 --- !u!61 &1205180944
 BoxCollider2D:
   m_ObjectHideFlags: 0
