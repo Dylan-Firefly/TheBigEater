@@ -592,6 +592,9 @@ MonoBehaviour:
   startPkButton: {fileID: 2186928189873234758}
   returnButtons:
   - {fileID: 1548711795242690344}
+  resultReturnButtons:
+  - {fileID: 4475502413853720733}
+  - {fileID: 5677283046492429255}
 --- !u!114 &7949639973332097393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -632,7 +635,9 @@ MonoBehaviour:
   postPanel: {fileID: 2246846800713106901}
   newPostPage: {fileID: 3153851489441716472}
   publishButton: {fileID: 2627386476017751220}
+  publishedPostObject: {fileID: 0}
   publishedPostButton: {fileID: 4766739362610997088}
+  hidePublishedPostUntilPosted: 1
   disablePublishedPostButtonUntilPosted: 1
 --- !u!114 &6563039038637468729
 MonoBehaviour:
@@ -2414,7 +2419,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6965589405607292117
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2660,8 +2665,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 878.5, y: 540}
+  m_AnchoredPosition: {x: 15.797, y: -0.0011292}
+  m_SizeDelta: {x: 1916.7, y: 1074.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7798877648275253533
 CanvasRenderer:
@@ -3143,7 +3148,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7264988802929356343
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3161,7 +3166,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -340}
   m_SizeDelta: {x: 354, y: 679}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8770279756083359137
@@ -3456,13 +3461,14 @@ GameObject:
   - component: {fileID: 6611668245156263484}
   - component: {fileID: 4788239872244775954}
   - component: {fileID: 6308159799720708571}
+  - component: {fileID: 674898211142100061}
   m_Layer: 5
   m_Name: CommonPage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6014140328522745218
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3533,12 +3539,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a3e42c7b02477e9f0dd25507c919f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PhoneCommonPageScrollTrigger
-  scrollRect: {fileID: 0}
+  scrollRect: {fileID: 674898211142100061}
   resultPrompt: {fileID: 4430253451868149903}
   bottomThreshold: 0.12
   triggerOnce: 1
   resetScrollToTop: 1
   hidePromptOnReset: 1
+--- !u!114 &674898211142100061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5320036973487217586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1aa08ab6e0800fa44ae55d278d1423e3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ScrollRect
+  m_Content: {fileID: 673268401025107746}
+  m_Horizontal: 0
+  m_Vertical: 1
+  m_MovementType: 2
+  m_Elasticity: 0.1
+  m_Inertia: 1
+  m_DecelerationRate: 0.135
+  m_ScrollSensitivity: 1
+  m_Viewport: {fileID: 8704906037027981688}
+  m_HorizontalScrollbar: {fileID: 0}
+  m_VerticalScrollbar: {fileID: 0}
+  m_HorizontalScrollbarVisibility: 0
+  m_VerticalScrollbarVisibility: 0
+  m_HorizontalScrollbarSpacing: 0
+  m_VerticalScrollbarSpacing: 0
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5438058337579634153
 GameObject:
   m_ObjectHideFlags: 0
@@ -3861,8 +3897,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 878.5, y: 540}
+  m_AnchoredPosition: {x: 15.803406, y: 0}
+  m_SizeDelta: {x: 1916.6624, y: 1074.8845}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2977875852504316122
 CanvasRenderer:
@@ -4832,7 +4868,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000030517578, y: -340}
+  m_AnchoredPosition: {x: 0.000030517578, y: -0.000579834}
   m_SizeDelta: {x: -354, y: 100}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!1 &6989174515813218496
