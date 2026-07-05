@@ -5707,6 +5707,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6674352000435956128, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
+    - target: {fileID: 6674352000435956128, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: -1271398758139532824, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
+    - target: {fileID: 6674352000435956128, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8602563437512868066, guid: 78db8e2954f55d948a35c62563bb7d92, type: 3}
       propertyPath: m_Name
       value: StreamUI
