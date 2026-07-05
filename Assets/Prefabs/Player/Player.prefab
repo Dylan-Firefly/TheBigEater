@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4661430431205780889}
   - component: {fileID: 1647641879732506073}
   - component: {fileID: 1955871535526923156}
+  - component: {fileID: 4539289506107813641}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -83,7 +84,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4601235523235687866, guid: 8fa793a974015c84b9af72899cada999, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5e145f92bca1db146a73767152703101, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -140,3 +141,20 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4539289506107813641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6294720384219026805}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5d7408bb8340e6adb968d2e9e782bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5
+  animator: {fileID: 1647641879732506073}
+  spriteRenderer: {fileID: 4661430431205780889}
+  speedParameter: Speed
+  flipSpriteByHorizontalInput: 1
