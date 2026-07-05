@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# TMP font assets embed atlas texture data; text merges can corrupt them.
+Assets/Resources/Font/*SDF.asset binary
