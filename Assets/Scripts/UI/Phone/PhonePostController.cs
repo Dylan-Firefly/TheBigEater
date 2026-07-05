@@ -7,37 +7,44 @@ public class PhonePostController : MonoBehaviour
     [Header("Post Rules")]
     [SerializeField] private bool postUnlockedOnStart = true;
     [SerializeField] private bool allowRepeatPosts;
-    [SerializeField] private bool hideRedHintOnStart = true;
 
-    [Header("References")]
+    [Header("Profile Prompt")]
     [SerializeField] private GameObject postRedHint;
+    [SerializeField] private Button openDraftButton;
+
+    [Header("Draft Panel")]
+    [SerializeField] private GameObject postPanel;
+    [SerializeField] private GameObject newPostPage;
     [SerializeField] private Button publishButton;
 
+    [Header("Published Post")]
+    [SerializeField] private GameObject publishedPostObject;
+    [SerializeField] private Button publishedPostButton;
+    [SerializeField] private bool hidePublishedPostUntilPosted = true;
+    [SerializeField] private bool disablePublishedPostButtonUntilPosted = true;
+
     private bool isPostUnlocked;
+    private bool isDraftOpen;
     private bool hasPosted;
 
     public bool IsPostUnlocked => isPostUnlocked;
+    public bool IsDraftOpen => isDraftOpen;
     public bool HasPosted => hasPosted;
+    public bool CanOpenDraft => isPostUnlocked && !isDraftOpen && (allowRepeatPosts || !hasPosted);
+    public bool CanPublish => isDraftOpen && isPostUnlocked && (allowRepeatPosts || !hasPosted);
+    public bool CanOpenPublishedPost => hasPosted;
+    public Button OpenDraftButton => openDraftButton;
     public Button PublishButton => publishButton;
+    public Button PublishedPostButton => publishedPostButton;
 
+    public event Action DraftOpened;
+    public event Action DraftClosed;
     public event Action PostPublished;
-
-    [ContextMenu("Auto Bind")]
-    public void AutoBind()
-    {
-        AutoBind(transform);
-    }
-
-    public void AutoBind(Transform root)
-    {
-        Transform searchRoot = root != null ? root : transform;
-        postRedHint = postRedHint != null ? postRedHint : PhoneUiLookup.FindGameObject(searchRoot, "PostRedHint");
-        publishButton = publishButton != null ? publishButton : PhoneUiLookup.FindButtonOn(searchRoot, "PostBtn");
-    }
 
     public void ResetPostState()
     {
         hasPosted = false;
+        isDraftOpen = false;
         isPostUnlocked = postUnlockedOnStart;
         RefreshUi();
     }
@@ -45,35 +52,110 @@ public class PhonePostController : MonoBehaviour
     public void SetPostUnlocked(bool unlocked)
     {
         isPostUnlocked = unlocked;
+
+        if (!isPostUnlocked)
+        {
+            CloseDraft();
+            return;
+        }
+
         RefreshUi();
+    }
+
+    public bool TryOpenDraft()
+    {
+        if (!CanOpenDraft)
+        {
+            return false;
+        }
+
+        isDraftOpen = true;
+        RefreshUi();
+        DraftOpened?.Invoke();
+        return true;
+    }
+
+    public void CloseDraft()
+    {
+        if (!isDraftOpen)
+        {
+            RefreshUi();
+            return;
+        }
+
+        isDraftOpen = false;
+        RefreshUi();
+        DraftClosed?.Invoke();
     }
 
     public bool TryPublish()
     {
-        if (!isPostUnlocked)
-        {
-            Debug.Log("[PhonePost] Post is locked. Call SetPostUnlocked(true) after a successful stream.");
-            return false;
-        }
-
-        if (hasPosted && !allowRepeatPosts)
+        if (!CanPublish)
         {
             return false;
         }
 
         hasPosted = true;
+        isDraftOpen = false;
+
+        if (!allowRepeatPosts)
+        {
+            isPostUnlocked = false;
+        }
+
         RefreshUi();
         PostPublished?.Invoke();
         return true;
     }
 
+    public void ValidateReferences(UnityEngine.Object owner)
+    {
+        WarnMissing(owner, postRedHint, nameof(postRedHint));
+        WarnMissing(owner, openDraftButton, nameof(openDraftButton));
+        WarnMissing(owner, postPanel, nameof(postPanel));
+        WarnMissing(owner, newPostPage, nameof(newPostPage));
+        WarnMissing(owner, publishButton, nameof(publishButton));
+        WarnMissing(owner, publishedPostButton, nameof(publishedPostButton));
+    }
+
     private void RefreshUi()
     {
-        SetActive(postRedHint, !hideRedHintOnStart && isPostUnlocked && !hasPosted);
+        SetActive(postRedHint, CanOpenDraft);
+        SetActive(postPanel, isDraftOpen);
+        SetActive(newPostPage, isDraftOpen);
+        SetActive(GetPublishedPostObject(), !hidePublishedPostUntilPosted || hasPosted);
+
+        if (openDraftButton != null)
+        {
+            openDraftButton.interactable = CanOpenDraft;
+        }
 
         if (publishButton != null)
         {
-            publishButton.interactable = isPostUnlocked && (allowRepeatPosts || !hasPosted);
+            publishButton.interactable = CanPublish;
+        }
+
+        if (publishedPostButton != null && disablePublishedPostButtonUntilPosted)
+        {
+            publishedPostButton.interactable = CanOpenPublishedPost;
+        }
+    }
+
+    private GameObject GetPublishedPostObject()
+    {
+        if (publishedPostObject != null)
+        {
+            return publishedPostObject;
+        }
+
+        return publishedPostButton != null ? publishedPostButton.gameObject : null;
+    }
+
+    private static void WarnMissing(UnityEngine.Object owner, UnityEngine.Object target, string fieldName)
+    {
+        if (target == null)
+        {
+            Debug.LogWarning($"[{nameof(PhonePostController)}] Missing reference: {fieldName}.", owner);
         }
     }
 

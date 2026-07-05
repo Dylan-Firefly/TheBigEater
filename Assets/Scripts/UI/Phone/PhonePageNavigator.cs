@@ -2,36 +2,20 @@ using UnityEngine;
 
 public class PhonePageNavigator : MonoBehaviour
 {
-    [Header("Pages")]
+    [Header("Root Pages")]
     [SerializeField] private GameObject phonePanel;
     [SerializeField] private GameObject appGridRoot;
     [SerializeField] private GameObject postAppRoot;
+
+    [Header("Post App Pages")]
     [SerializeField] private GameObject profilePage;
     [SerializeField] private GameObject commonPage;
     [SerializeField] private GameObject showingResult;
     [SerializeField] private GameObject commentResultPanel;
+
+    [Header("Final Result")]
     [SerializeField] private GameObject goodResult;
     [SerializeField] private GameObject badResult;
-
-    [ContextMenu("Auto Bind")]
-    public void AutoBind()
-    {
-        AutoBind(transform);
-    }
-
-    public void AutoBind(Transform root)
-    {
-        Transform searchRoot = root != null ? root : transform;
-        phonePanel = phonePanel != null ? phonePanel : PhoneUiLookup.FindGameObject(searchRoot, "PhonePanel");
-        appGridRoot = appGridRoot != null ? appGridRoot : PhoneUiLookup.FindGameObject(searchRoot, "AppGridRoot");
-        postAppRoot = postAppRoot != null ? postAppRoot : PhoneUiLookup.FindGameObject(searchRoot, "PostAppRoot");
-        profilePage = profilePage != null ? profilePage : PhoneUiLookup.FindGameObject(searchRoot, "Profile");
-        commonPage = commonPage != null ? commonPage : PhoneUiLookup.FindGameObject(searchRoot, "CommonPage");
-        showingResult = showingResult != null ? showingResult : PhoneUiLookup.FindGameObject(searchRoot, "ShowingResult");
-        commentResultPanel = commentResultPanel != null ? commentResultPanel : PhoneUiLookup.FindGameObject(searchRoot, "CommentResultPanel");
-        goodResult = goodResult != null ? goodResult : PhoneUiLookup.FindGameObject(searchRoot, "GoodResult");
-        badResult = badResult != null ? badResult : PhoneUiLookup.FindGameObject(searchRoot, "BadResult");
-    }
 
     public void ShowClosed()
     {
@@ -62,14 +46,14 @@ public class PhonePageNavigator : MonoBehaviour
         SetActive(badResult, false);
     }
 
-    public void ShowPublishedPost(bool showResultGuide)
+    public void ShowPostDetail(bool showResultPrompt)
     {
         SetActive(phonePanel, true);
         SetActive(appGridRoot, false);
         SetActive(postAppRoot, true);
         SetActive(profilePage, false);
         SetActive(commonPage, true);
-        SetActive(showingResult, showResultGuide);
+        SetActive(showingResult, showResultPrompt);
         SetActive(commentResultPanel, false);
         SetActive(goodResult, false);
         SetActive(badResult, false);
@@ -106,7 +90,12 @@ public class PhonePageNavigator : MonoBehaviour
         SetActive(phonePanel, visible);
     }
 
-    private void HidePostPages()
+    public void SetShowingResultVisible(bool visible)
+    {
+        SetActive(showingResult, visible);
+    }
+
+    public void HidePostPages()
     {
         SetActive(profilePage, false);
         SetActive(commonPage, false);
@@ -114,6 +103,27 @@ public class PhonePageNavigator : MonoBehaviour
         SetActive(commentResultPanel, false);
         SetActive(goodResult, false);
         SetActive(badResult, false);
+    }
+
+    public void ValidateReferences(Object owner)
+    {
+        WarnMissing(owner, phonePanel, nameof(phonePanel));
+        WarnMissing(owner, appGridRoot, nameof(appGridRoot));
+        WarnMissing(owner, postAppRoot, nameof(postAppRoot));
+        WarnMissing(owner, profilePage, nameof(profilePage));
+        WarnMissing(owner, commonPage, nameof(commonPage));
+        WarnMissing(owner, showingResult, nameof(showingResult));
+        WarnMissing(owner, commentResultPanel, nameof(commentResultPanel));
+        WarnMissing(owner, goodResult, nameof(goodResult));
+        WarnMissing(owner, badResult, nameof(badResult));
+    }
+
+    private static void WarnMissing(Object owner, Object target, string fieldName)
+    {
+        if (target == null)
+        {
+            Debug.LogWarning($"[{nameof(PhonePageNavigator)}] Missing reference: {fieldName}.", owner);
+        }
     }
 
     private static void SetActive(GameObject target, bool active)

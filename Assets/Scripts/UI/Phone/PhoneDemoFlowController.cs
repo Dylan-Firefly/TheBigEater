@@ -10,13 +10,13 @@ public class PhoneDemoFlowController : MonoBehaviour
         Closed,
         AppGrid,
         Profile,
-        PublishedPost,
+        DraftPost,
+        PostDetail,
         PkRunning,
         FinalResult
     }
 
     [Header("Setup")]
-    [SerializeField] private bool autoBindOnAwake = true;
     [SerializeField] private bool initializeOnAwake = true;
 
     [Header("Flow")]
@@ -27,6 +27,7 @@ public class PhoneDemoFlowController : MonoBehaviour
     [Header("Modules")]
     [SerializeField] private PhonePageNavigator pageNavigator;
     [SerializeField] private PhonePostController postController;
+    [SerializeField] private PhoneCommonPageScrollTrigger commonPageScrollTrigger;
     [SerializeField] private PhoneCommentRevealController commentRevealController;
     [SerializeField] private PhoneReviewPkController reviewPkController;
 
@@ -36,9 +37,11 @@ public class PhoneDemoFlowController : MonoBehaviour
     [SerializeField] private Button streamAppButton;
     [SerializeField] private Button startPkButton;
     [SerializeField] private List<Button> returnButtons = new List<Button>();
+    [SerializeField] private List<Button> resultReturnButtons = new List<Button>();
 
     private bool isPhoneBlocked;
     private bool buttonsBound;
+    private bool moduleEventsBound;
 
     public PhoneDemoState State { get; private set; } = PhoneDemoState.Closed;
     public bool IsPhoneBlocked => isPhoneBlocked;
@@ -57,11 +60,7 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     private void Awake()
     {
-        if (autoBindOnAwake)
-        {
-            AutoBind();
-        }
-
+        ValidateReferences();
         BindButtons();
         BindModuleEvents();
 
@@ -77,34 +76,15 @@ public class PhoneDemoFlowController : MonoBehaviour
         UnbindModuleEvents();
     }
 
-    [ContextMenu("Auto Bind")]
-    public void AutoBind()
-    {
-        pageNavigator = pageNavigator != null ? pageNavigator : PhoneUiLookup.EnsureComponent<PhonePageNavigator>(gameObject);
-        postController = postController != null ? postController : PhoneUiLookup.EnsureComponent<PhonePostController>(gameObject);
-        commentRevealController = commentRevealController != null ? commentRevealController : PhoneUiLookup.EnsureComponent<PhoneCommentRevealController>(gameObject);
-        reviewPkController = reviewPkController != null ? reviewPkController : PhoneUiLookup.EnsureComponent<PhoneReviewPkController>(gameObject);
-
-        pageNavigator.AutoBind(transform);
-        postController.AutoBind(transform);
-        commentRevealController.AutoBind(transform);
-        reviewPkController.AutoBind(transform);
-
-        phoneButton = phoneButton != null ? phoneButton : PhoneUiLookup.FindButtonOn(transform, "PhoneBtn");
-        postAppButton = postAppButton != null ? postAppButton : PhoneUiLookup.FindButtonUnder(transform, "PostApp");
-        streamAppButton = streamAppButton != null ? streamAppButton : PhoneUiLookup.FindButtonUnder(transform, "StreamApp");
-        startPkButton = startPkButton != null ? startPkButton : PhoneUiLookup.FindButtonOn(transform, "ResultBtn");
-        AutoBindReturnButtons();
-    }
-
     [ContextMenu("Reset Demo State")]
     public void ResetDemoState()
     {
         StopResultFlow();
-        postController.ResetPostState();
-        reviewPkController.ResetToNeutral();
-        commentRevealController.HideAll();
-        SetButtonInteractable(startPkButton, true);
+        postController?.ResetPostState();
+        reviewPkController?.ResetToNeutral();
+        commentRevealController?.HideAll();
+        commonPageScrollTrigger?.ResetTrigger();
+        SetButtonInteractable(startPkButton, false);
 
         if (phonePanelVisibleOnStart)
         {
@@ -112,8 +92,9 @@ public class PhoneDemoFlowController : MonoBehaviour
         }
         else
         {
-            pageNavigator.ShowClosed();
+            pageNavigator?.ShowClosed();
             SetActive(phoneButton != null ? phoneButton.gameObject : null, true);
+            SetReturnButtonsVisible(false);
             State = PhoneDemoState.Closed;
         }
     }
@@ -129,7 +110,7 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     public void SetPostUnlocked(bool unlocked)
     {
-        postController.SetPostUnlocked(unlocked);
+        postController?.SetPostUnlocked(unlocked);
     }
 
     public void OpenPhone()
@@ -140,8 +121,9 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
-        pageNavigator.SetPhonePanelVisible(true);
+        pageNavigator?.SetPhonePanelVisible(true);
         SetActive(phoneButton != null ? phoneButton.gameObject : null, !hidePhoneButtonWhileOpen);
+        SetReturnButtonsVisible(true);
 
         if (State == PhoneDemoState.Closed)
         {
@@ -154,10 +136,13 @@ public class PhoneDemoFlowController : MonoBehaviour
     public void ClosePhone()
     {
         StopResultFlow();
-        pageNavigator.ShowClosed();
-        commentRevealController.HideAll();
-        SetButtonInteractable(startPkButton, true);
+        postController?.CloseDraft();
+        commonPageScrollTrigger?.ResetTrigger();
+        pageNavigator?.ShowClosed();
+        commentRevealController?.HideAll();
+        SetButtonInteractable(startPkButton, false);
         SetActive(phoneButton != null ? phoneButton.gameObject : null, true);
+        SetReturnButtonsVisible(false);
         State = PhoneDemoState.Closed;
         PhoneClosed?.Invoke();
     }
@@ -165,59 +150,90 @@ public class PhoneDemoFlowController : MonoBehaviour
     public void ShowAppGrid()
     {
         StopResultFlow();
-        pageNavigator.ShowAppGrid();
-        commentRevealController.HideAll();
-        SetButtonInteractable(startPkButton, true);
+        postController?.CloseDraft();
+        commonPageScrollTrigger?.ResetTrigger();
+        pageNavigator?.ShowAppGrid();
+        commentRevealController?.HideAll();
+        SetButtonInteractable(startPkButton, false);
+        SetReturnButtonsVisible(true);
         State = PhoneDemoState.AppGrid;
     }
 
     public void OpenPostApp()
     {
         StopResultFlow();
-        pageNavigator.ShowProfile();
-        commentRevealController.HideAll();
-        SetButtonInteractable(startPkButton, true);
+        postController?.CloseDraft();
+        commonPageScrollTrigger?.ResetTrigger();
+        pageNavigator?.ShowProfile();
+        commentRevealController?.HideAll();
+        SetButtonInteractable(startPkButton, false);
+        SetReturnButtonsVisible(true);
         State = PhoneDemoState.Profile;
+    }
+
+    public void OpenDraftPost()
+    {
+        if (postController == null || !postController.TryOpenDraft())
+        {
+            return;
+        }
+
+        pageNavigator?.ShowProfile();
+        SetReturnButtonsVisible(true);
+        State = PhoneDemoState.DraftPost;
     }
 
     public void PublishPost()
     {
-        bool publishedNewPost = postController.TryPublish();
-        if (!publishedNewPost && !postController.HasPosted)
+        if (postController == null || !postController.TryPublish())
         {
             return;
         }
 
-        OpenPublishedPost(true);
-
-        if (publishedNewPost)
-        {
-            PostPublished?.Invoke();
-        }
+        pageNavigator?.ShowProfile();
+        SetReturnButtonsVisible(true);
+        State = PhoneDemoState.Profile;
+        PostPublished?.Invoke();
     }
 
-    public void OpenPublishedPost(bool showResultGuide)
+    public void OpenPostDetail()
     {
+        if (postController != null && !postController.CanOpenPublishedPost)
+        {
+            Debug.Log("[PhoneDemoFlow] Cannot open post detail before a post is published.");
+            return;
+        }
+
         StopResultFlow();
-        pageNavigator.ShowPublishedPost(showResultGuide);
-        commentRevealController.HideAll();
-        SetButtonInteractable(startPkButton, true);
-        State = PhoneDemoState.PublishedPost;
+        commentRevealController?.HideAll();
+        pageNavigator?.ShowPostDetail(false);
+        commonPageScrollTrigger?.ResetTrigger();
+        SetButtonInteractable(startPkButton, false);
+        SetReturnButtonsVisible(true);
+        State = PhoneDemoState.PostDetail;
     }
 
     public void StartPkResult()
     {
-        if (reviewPkController.IsRunning)
+        if (reviewPkController != null && reviewPkController.IsRunning)
         {
             return;
         }
 
-        pageNavigator.ShowPkPage();
-        commentRevealController.StartReveal();
+        if (commonPageScrollTrigger != null && !commonPageScrollTrigger.HasTriggered)
+        {
+            Debug.Log("[PhoneDemoFlow] Scroll the common page down before starting the comment result.");
+            return;
+        }
+
+        pageNavigator?.ShowPkPage();
+        commentRevealController?.StartReveal();
         SetButtonInteractable(startPkButton, false);
+        SetReturnButtonsVisible(true);
 
         State = PhoneDemoState.PkRunning;
-        reviewPkController.StartRandomPk(commentRevealController.TotalRevealDuration);
+        float revealDuration = commentRevealController != null ? commentRevealController.TotalRevealDuration : 0f;
+        reviewPkController?.StartRandomPk(revealDuration);
     }
 
     public void Back()
@@ -230,13 +246,21 @@ public class PhoneDemoFlowController : MonoBehaviour
 
         if (State == PhoneDemoState.PkRunning)
         {
-            OpenPublishedPost(false);
+            OpenPostDetail();
             return;
         }
 
-        if (State == PhoneDemoState.PublishedPost)
+        if (State == PhoneDemoState.PostDetail)
         {
             OpenPostApp();
+            return;
+        }
+
+        if (State == PhoneDemoState.DraftPost)
+        {
+            postController?.CloseDraft();
+            pageNavigator?.ShowProfile();
+            State = PhoneDemoState.Profile;
             return;
         }
 
@@ -252,6 +276,17 @@ public class PhoneDemoFlowController : MonoBehaviour
         }
     }
 
+    private void HandleResultPromptUnlocked()
+    {
+        if (State != PhoneDemoState.PostDetail)
+        {
+            return;
+        }
+
+        pageNavigator?.SetShowingResultVisible(true);
+        SetButtonInteractable(startPkButton, true);
+    }
+
     private void HandlePkStarted(int goodCount, int badCount, float goodRatio)
     {
         PkStarted?.Invoke(goodCount, badCount, goodRatio);
@@ -259,16 +294,17 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     private void HandlePkCompleted(int goodCount, int badCount, float goodRatio, bool isGoodResult)
     {
-        pageNavigator.ShowFinalResult(isGoodResult, keepPostPageBehindFinalResult);
+        pageNavigator?.ShowFinalResult(isGoodResult, keepPostPageBehindFinalResult);
         SetButtonInteractable(startPkButton, true);
+        SetReturnButtonsVisible(true);
         State = PhoneDemoState.FinalResult;
         PkCompleted?.Invoke(goodCount, badCount, goodRatio, isGoodResult);
     }
 
     private void StopResultFlow()
     {
-        reviewPkController.StopPk();
-        commentRevealController.StopReveal();
+        reviewPkController?.StopPk();
+        commentRevealController?.StopReveal();
     }
 
     private void BindButtons()
@@ -293,9 +329,22 @@ public class PhoneDemoFlowController : MonoBehaviour
             streamAppButton.onClick.AddListener(OpenPostApp);
         }
 
-        if (postController != null && postController.PublishButton != null)
+        if (postController != null)
         {
-            postController.PublishButton.onClick.AddListener(PublishPost);
+            if (postController.OpenDraftButton != null)
+            {
+                postController.OpenDraftButton.onClick.AddListener(OpenDraftPost);
+            }
+
+            if (postController.PublishButton != null)
+            {
+                postController.PublishButton.onClick.AddListener(PublishPost);
+            }
+
+            if (postController.PublishedPostButton != null)
+            {
+                postController.PublishedPostButton.onClick.AddListener(OpenPostDetail);
+            }
         }
 
         if (startPkButton != null)
@@ -308,6 +357,14 @@ public class PhoneDemoFlowController : MonoBehaviour
             if (returnButton != null)
             {
                 returnButton.onClick.AddListener(Back);
+            }
+        }
+
+        foreach (Button resultReturnButton in resultReturnButtons)
+        {
+            if (resultReturnButton != null)
+            {
+                resultReturnButton.onClick.AddListener(Back);
             }
         }
 
@@ -336,9 +393,22 @@ public class PhoneDemoFlowController : MonoBehaviour
             streamAppButton.onClick.RemoveListener(OpenPostApp);
         }
 
-        if (postController != null && postController.PublishButton != null)
+        if (postController != null)
         {
-            postController.PublishButton.onClick.RemoveListener(PublishPost);
+            if (postController.OpenDraftButton != null)
+            {
+                postController.OpenDraftButton.onClick.RemoveListener(OpenDraftPost);
+            }
+
+            if (postController.PublishButton != null)
+            {
+                postController.PublishButton.onClick.RemoveListener(PublishPost);
+            }
+
+            if (postController.PublishedPostButton != null)
+            {
+                postController.PublishedPostButton.onClick.RemoveListener(OpenPostDetail);
+            }
         }
 
         if (startPkButton != null)
@@ -354,37 +424,99 @@ public class PhoneDemoFlowController : MonoBehaviour
             }
         }
 
+        foreach (Button resultReturnButton in resultReturnButtons)
+        {
+            if (resultReturnButton != null)
+            {
+                resultReturnButton.onClick.RemoveListener(Back);
+            }
+        }
+
         buttonsBound = false;
     }
 
     private void BindModuleEvents()
     {
+        if (moduleEventsBound)
+        {
+            return;
+        }
+
         if (reviewPkController != null)
         {
-            reviewPkController.PkStarted -= HandlePkStarted;
             reviewPkController.PkStarted += HandlePkStarted;
-            reviewPkController.PkCompleted -= HandlePkCompleted;
             reviewPkController.PkCompleted += HandlePkCompleted;
         }
+
+        if (commonPageScrollTrigger != null)
+        {
+            commonPageScrollTrigger.ResultPromptUnlocked += HandleResultPromptUnlocked;
+        }
+
+        moduleEventsBound = true;
     }
 
     private void UnbindModuleEvents()
     {
+        if (!moduleEventsBound)
+        {
+            return;
+        }
+
         if (reviewPkController != null)
         {
             reviewPkController.PkStarted -= HandlePkStarted;
             reviewPkController.PkCompleted -= HandlePkCompleted;
         }
+
+        if (commonPageScrollTrigger != null)
+        {
+            commonPageScrollTrigger.ResultPromptUnlocked -= HandleResultPromptUnlocked;
+        }
+
+        moduleEventsBound = false;
     }
 
-    private void AutoBindReturnButtons()
+    private void ValidateReferences()
     {
-        Button[] buttons = GetComponentsInChildren<Button>(true);
-        foreach (Button button in buttons)
+        WarnMissing(pageNavigator, nameof(pageNavigator));
+        WarnMissing(postController, nameof(postController));
+        WarnMissing(commonPageScrollTrigger, nameof(commonPageScrollTrigger));
+        WarnMissing(commentRevealController, nameof(commentRevealController));
+        WarnMissing(reviewPkController, nameof(reviewPkController));
+        WarnMissing(phoneButton, nameof(phoneButton));
+        WarnMissing(postAppButton, nameof(postAppButton));
+        WarnMissing(startPkButton, nameof(startPkButton));
+
+        pageNavigator?.ValidateReferences(this);
+        postController?.ValidateReferences(this);
+        commonPageScrollTrigger?.ValidateReferences(this);
+        reviewPkController?.ValidateReferences(this);
+    }
+
+    private void WarnMissing(UnityEngine.Object target, string fieldName)
+    {
+        if (target == null)
         {
-            if (button != null && button.gameObject.name == "Return" && !returnButtons.Contains(button))
+            Debug.LogWarning($"[{nameof(PhoneDemoFlowController)}] Missing reference: {fieldName}.", this);
+        }
+    }
+
+    private void SetReturnButtonsVisible(bool visible)
+    {
+        foreach (Button returnButton in returnButtons)
+        {
+            if (returnButton != null)
             {
-                returnButtons.Add(button);
+                SetActive(returnButton.gameObject, visible);
+            }
+        }
+
+        foreach (Button resultReturnButton in resultReturnButtons)
+        {
+            if (resultReturnButton != null)
+            {
+                SetActive(resultReturnButton.gameObject, visible);
             }
         }
     }

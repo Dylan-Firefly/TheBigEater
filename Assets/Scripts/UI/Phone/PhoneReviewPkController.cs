@@ -29,22 +29,6 @@ public class PhoneReviewPkController : MonoBehaviour
     public event Action<int, int, float> PkStarted;
     public event Action<int, int, float, bool> PkCompleted;
 
-    [ContextMenu("Auto Bind")]
-    public void AutoBind()
-    {
-        AutoBind(transform);
-    }
-
-    public void AutoBind(Transform root)
-    {
-        Transform searchRoot = root != null ? root : transform;
-        if (pkSlider == null)
-        {
-            GameObject pkObject = PhoneUiLookup.FindGameObject(searchRoot, "PK");
-            pkSlider = pkObject != null ? pkObject.GetComponent<Slider>() : null;
-        }
-    }
-
     public void ResetToNeutral()
     {
         StopPk();
@@ -107,6 +91,14 @@ public class PhoneReviewPkController : MonoBehaviour
         pkRoutine = null;
         IsRunning = false;
         PkCompleted?.Invoke(LastGoodCount, LastBadCount, LastGoodRatio, LastResultWasGood);
+    }
+
+    public void ValidateReferences(UnityEngine.Object owner)
+    {
+        if (pkSlider == null)
+        {
+            Debug.LogWarning($"[{nameof(PhoneReviewPkController)}] Missing reference: pkSlider.", owner);
+        }
     }
 
     private void SetValue(float value)

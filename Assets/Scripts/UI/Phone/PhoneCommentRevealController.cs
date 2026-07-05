@@ -25,29 +25,17 @@ public class PhoneCommentRevealController : MonoBehaviour
 
     public event Action RevealCompleted;
 
-    [ContextMenu("Auto Bind")]
-    public void AutoBind()
+    private void Awake()
     {
-        AutoBind(transform);
+        PrepareItems();
+        SetItemsVisible(false);
     }
 
-    public void AutoBind(Transform root)
+    public void PrepareItems()
     {
-        Transform searchRoot = root != null ? root : transform;
-        if (commentListRoot == null)
-        {
-            GameObject listObject = PhoneUiLookup.FindGameObject(searchRoot, "CommitList");
-            if (listObject == null)
-            {
-                listObject = PhoneUiLookup.FindGameObject(searchRoot, "CommentList");
-            }
-
-            commentListRoot = listObject != null ? listObject.transform : null;
-        }
-
         if (commentItems.Count == 0)
         {
-            BindCommentItems(searchRoot);
+            BindCommentItemsFromRoot();
         }
 
         StoreOriginalPositions();
@@ -149,32 +137,17 @@ public class PhoneCommentRevealController : MonoBehaviour
         }
     }
 
-    private void BindCommentItems(Transform searchRoot)
+    private void BindCommentItemsFromRoot()
     {
-        if (commentListRoot != null)
-        {
-            for (int i = 0; i < commentListRoot.childCount; i++)
-            {
-                Transform child = commentListRoot.GetChild(i);
-                if (child != null)
-                {
-                    commentItems.Add(child.gameObject);
-                }
-            }
-
-            return;
-        }
-
-        GameObject panel = PhoneUiLookup.FindGameObject(searchRoot, "CommentResultPanel");
-        if (panel == null)
+        if (commentListRoot == null)
         {
             return;
         }
 
-        for (int i = 0; i < panel.transform.childCount; i++)
+        for (int i = 0; i < commentListRoot.childCount; i++)
         {
-            Transform child = panel.transform.GetChild(i);
-            if (child != null && child.name.StartsWith("CommitBG", StringComparison.Ordinal))
+            Transform child = commentListRoot.GetChild(i);
+            if (child != null)
             {
                 commentItems.Add(child.gameObject);
             }
