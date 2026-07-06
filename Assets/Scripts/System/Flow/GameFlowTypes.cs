@@ -3,6 +3,7 @@ public enum GameSceneId
     MainMenu,
     OpeningStreaming,
     Countryside,
+    OtherWorld,
     Indoor,
     LiveStreamGameplay,
     PhoneGameplay
@@ -18,9 +19,11 @@ public enum GameFlowState
     TransformDialogue,
     Cg2,
     Countryside,
+    OtherWorld,
     Indoor,
     LiveStream,
     PhoneGameplay,
+    DemoEnd,
     GameOver
 }
 

@@ -18,7 +18,7 @@ public class PhoneGameplaySceneBridge : MonoBehaviour
     {
         if (phoneFlow != null)
         {
-            phoneFlow.PkCompleted += HandlePkCompleted;
+            phoneFlow.FinalResultConfirmed += HandleFinalResultConfirmed;
         }
     }
 
@@ -36,11 +36,11 @@ public class PhoneGameplaySceneBridge : MonoBehaviour
     {
         if (phoneFlow != null)
         {
-            phoneFlow.PkCompleted -= HandlePkCompleted;
+            phoneFlow.FinalResultConfirmed -= HandleFinalResultConfirmed;
         }
     }
 
-    private void HandlePkCompleted(int goodCount, int badCount, float goodRatio, bool isGoodResult)
+    private void HandleFinalResultConfirmed(int goodCount, int badCount, float goodRatio, bool isGoodResult)
     {
         Debug.Log($"[PhoneGameplaySceneBridge] Phone result good={goodCount}, bad={badCount}, ratio={goodRatio:0.00}, goodResult={isGoodResult}");
         GameManager.EnsureInstance().OnPhoneGameplayFinished();

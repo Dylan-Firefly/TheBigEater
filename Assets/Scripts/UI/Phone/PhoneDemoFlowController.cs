@@ -57,6 +57,7 @@ public class PhoneDemoFlowController : MonoBehaviour
     public event Action PostPublished;
     public event Action<int, int, float> PkStarted;
     public event Action<int, int, float, bool> PkCompleted;
+    public event Action<int, int, float, bool> FinalResultConfirmed;
 
     private void Awake()
     {
@@ -240,7 +241,7 @@ public class PhoneDemoFlowController : MonoBehaviour
     {
         if (State == PhoneDemoState.FinalResult)
         {
-            OpenPostApp();
+            ConfirmFinalResult();
             return;
         }
 
@@ -274,6 +275,23 @@ public class PhoneDemoFlowController : MonoBehaviour
         {
             ClosePhone();
         }
+    }
+
+    public void ConfirmFinalResult()
+    {
+        if (State != PhoneDemoState.FinalResult)
+        {
+            Back();
+            return;
+        }
+
+        if (FinalResultConfirmed != null)
+        {
+            FinalResultConfirmed.Invoke(LastGoodCount, LastBadCount, LastGoodRatio, LastResultWasGood);
+            return;
+        }
+
+        OpenPostApp();
     }
 
     private void HandleResultPromptUnlocked()
@@ -364,7 +382,7 @@ public class PhoneDemoFlowController : MonoBehaviour
         {
             if (resultReturnButton != null)
             {
-                resultReturnButton.onClick.AddListener(Back);
+                resultReturnButton.onClick.AddListener(ConfirmFinalResult);
             }
         }
 
@@ -428,7 +446,7 @@ public class PhoneDemoFlowController : MonoBehaviour
         {
             if (resultReturnButton != null)
             {
-                resultReturnButton.onClick.RemoveListener(Back);
+                resultReturnButton.onClick.RemoveListener(ConfirmFinalResult);
             }
         }
 
