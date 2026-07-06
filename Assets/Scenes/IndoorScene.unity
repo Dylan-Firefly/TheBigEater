@@ -606,7 +606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FungusState
-  selectedFlowchart: {fileID: 1466557425}
+  selectedFlowchart: {fileID: 2057443860}
 --- !u!4 &690614765
 Transform:
   m_ObjectHideFlags: 1
@@ -819,6 +819,67 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819560739}
   m_CullTransparentMesh: 1
+--- !u!1001 &902577102
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -57.60342
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.31593
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2823365792907540492, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: m_Name
+      value: Fungus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
 --- !u!1 &914805874
 GameObject:
   m_ObjectHideFlags: 0
@@ -1194,74 +1255,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245513087}
   m_CullTransparentMesh: 1
---- !u!1001 &1466557424
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1901831091290156570, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_Name
-      value: mainMapFlowchart
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1920
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8479456700905365992, guid: 16313588704936a428700057d893d62e, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 16313588704936a428700057d893d62e, type: 3}
---- !u!114 &1466557425 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4491459215117710322, guid: 16313588704936a428700057d893d62e, type: 3}
-  m_PrefabInstance: {fileID: 1466557424}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1505316418
 GameObject:
   m_ObjectHideFlags: 0
@@ -1490,6 +1483,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1642347827 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8470145998908521689, guid: 62cdfdcc5e67a2a45b3dfda95e10b104, type: 3}
+  m_PrefabInstance: {fileID: 1230360537}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1733744538
 GameObject:
   m_ObjectHideFlags: 0
@@ -1534,14 +1532,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b23d872e58e4a5db6efdf2cf38d7a31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogRoot: {fileID: 0}
+  dialogRoot: {fileID: 1642347827}
   dialogRootName: playerBigSayDialog
   showDelaySeconds: 0.1
   hideOnAwake: 1
   executeFungusBlock: 1
-  flowchart: {fileID: 0}
+  flowchart: {fileID: 2057443860}
   fallbackFlowchartName: mainMapFlowchart
   blockName: mama
+  hideDuringDialogueObjects:
+  - {fileID: 345099224}
+  - {fileID: 721399661}
   rememberWithPlayerPrefs: 1
   shownKey: TheBigEater.Indoor.EntryDialogueShown
 --- !u!1001 &1842354410
@@ -1921,6 +1922,17 @@ MonoBehaviour:
   mainMenuButton: {fileID: 465162751}
   hideEndOnStart: 1
   showEndDelaySeconds: 0
+--- !u!114 &2057443860 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 902577102}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -1932,5 +1944,5 @@ SceneRoots:
   - {fileID: 577498520}
   - {fileID: 1230360537}
   - {fileID: 690614765}
-  - {fileID: 1466557424}
   - {fileID: 1733744539}
+  - {fileID: 902577102}

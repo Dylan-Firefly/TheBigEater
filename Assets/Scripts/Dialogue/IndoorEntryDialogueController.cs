@@ -17,9 +17,15 @@ public sealed class IndoorEntryDialogueController : MonoBehaviour
     [SerializeField] private string fallbackFlowchartName = "mainMapFlowchart";
     [SerializeField] private string blockName = "mama";
 
+    [Header("Objects Hidden During Dialogue")]
+    [SerializeField] private GameObject[] hideDuringDialogueObjects;
+
     [Header("One Shot")]
     [SerializeField] private bool rememberWithPlayerPrefs = true;
     [SerializeField] private string shownKey = "TheBigEater.Indoor.EntryDialogueShown";
+
+    private bool[] hiddenObjectPreviousStates;
+    private bool hasHiddenObjects;
 
     private void Awake()
     {
@@ -59,12 +65,16 @@ public sealed class IndoorEntryDialogueController : MonoBehaviour
         }
 
         ResolveDialogRoot();
+        HideObjectsForDialogue();
         SetDialogVisible(true);
 
         if (executeFungusBlock)
         {
             ExecuteBlock();
+            yield break;
         }
+
+        RestoreObjectsHiddenForDialogue();
     }
 
     private bool HasAlreadyShown()
@@ -107,6 +117,7 @@ public sealed class IndoorEntryDialogueController : MonoBehaviour
     {
         if (string.IsNullOrWhiteSpace(blockName))
         {
+            RestoreObjectsHiddenForDialogue();
             return;
         }
 
@@ -114,6 +125,7 @@ public sealed class IndoorEntryDialogueController : MonoBehaviour
         if (targetFlowchart == null)
         {
             Debug.LogWarning($"[IndoorEntryDialogueController] No Flowchart found for block '{blockName}'.", this);
+            RestoreObjectsHiddenForDialogue();
             return;
         }
 
@@ -121,10 +133,62 @@ public sealed class IndoorEntryDialogueController : MonoBehaviour
         if (block == null)
         {
             Debug.LogWarning($"[IndoorEntryDialogueController] Flowchart '{targetFlowchart.name}' has no block '{blockName}'.", this);
+            RestoreObjectsHiddenForDialogue();
             return;
         }
 
-        targetFlowchart.ExecuteBlock(block);
+        if (!targetFlowchart.ExecuteBlock(block, 0, HandleDialogueComplete))
+        {
+            RestoreObjectsHiddenForDialogue();
+        }
+    }
+
+    private void HandleDialogueComplete()
+    {
+        RestoreObjectsHiddenForDialogue();
+    }
+
+    private void HideObjectsForDialogue()
+    {
+        if (hideDuringDialogueObjects == null || hideDuringDialogueObjects.Length == 0)
+        {
+            return;
+        }
+
+        hiddenObjectPreviousStates = new bool[hideDuringDialogueObjects.Length];
+        for (int i = 0; i < hideDuringDialogueObjects.Length; i++)
+        {
+            GameObject target = hideDuringDialogueObjects[i];
+            if (target == null)
+            {
+                continue;
+            }
+
+            hiddenObjectPreviousStates[i] = target.activeSelf;
+            target.SetActive(false);
+        }
+
+        hasHiddenObjects = true;
+    }
+
+    private void RestoreObjectsHiddenForDialogue()
+    {
+        if (!hasHiddenObjects || hideDuringDialogueObjects == null || hiddenObjectPreviousStates == null)
+        {
+            return;
+        }
+
+        int count = Mathf.Min(hideDuringDialogueObjects.Length, hiddenObjectPreviousStates.Length);
+        for (int i = 0; i < count; i++)
+        {
+            GameObject target = hideDuringDialogueObjects[i];
+            if (target != null)
+            {
+                target.SetActive(hiddenObjectPreviousStates[i]);
+            }
+        }
+
+        hasHiddenObjects = false;
     }
 
     private Flowchart ResolveFlowchart()

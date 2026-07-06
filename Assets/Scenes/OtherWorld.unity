@@ -3017,6 +3017,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1082450717}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: selectedCommands.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4634836800106867348, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
