@@ -122,6 +122,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneOpen();
         pageNavigator?.SetPhonePanelVisible(true);
         SetActive(phoneButton != null ? phoneButton.gameObject : null, !hidePhoneButtonWhileOpen);
         SetReturnButtonsVisible(true);
@@ -162,6 +163,16 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     public void OpenPostApp()
     {
+        OpenPostApp(true);
+    }
+
+    private void OpenPostApp(bool playSound)
+    {
+        if (playSound)
+        {
+            AudioManager.PlayPhoneButton();
+        }
+
         StopResultFlow();
         postController?.CloseDraft();
         commonPageScrollTrigger?.ResetTrigger();
@@ -179,6 +190,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         pageNavigator?.ShowProfile();
         SetReturnButtonsVisible(true);
         State = PhoneDemoState.DraftPost;
@@ -191,6 +203,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         pageNavigator?.ShowProfile();
         SetReturnButtonsVisible(true);
         State = PhoneDemoState.Profile;
@@ -199,10 +212,20 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     public void OpenPostDetail()
     {
+        OpenPostDetail(true);
+    }
+
+    private void OpenPostDetail(bool playSound)
+    {
         if (postController != null && !postController.CanOpenPublishedPost)
         {
             Debug.Log("[PhoneDemoFlow] Cannot open post detail before a post is published.");
             return;
+        }
+
+        if (playSound)
+        {
+            AudioManager.PlayPhoneButton();
         }
 
         StopResultFlow();
@@ -227,6 +250,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         pageNavigator?.ShowPkPage();
         commentRevealController?.StartReveal();
         SetButtonInteractable(startPkButton, false);
@@ -245,15 +269,16 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayBack();
         if (State == PhoneDemoState.PkRunning)
         {
-            OpenPostDetail();
+            OpenPostDetail(false);
             return;
         }
 
         if (State == PhoneDemoState.PostDetail)
         {
-            OpenPostApp();
+            OpenPostApp(false);
             return;
         }
 
@@ -285,13 +310,14 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         if (FinalResultConfirmed != null)
         {
             FinalResultConfirmed.Invoke(LastGoodCount, LastBadCount, LastGoodRatio, LastResultWasGood);
             return;
         }
 
-        OpenPostApp();
+        OpenPostApp(false);
     }
 
     private void HandleResultPromptUnlocked()

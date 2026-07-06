@@ -41,11 +41,13 @@ public class MainMenu : MonoBehaviour
 
     public void StartNewGame()
     {
+        AudioManager.PlayMainMenu();
         GameManager.EnsureInstance().StartNewGame();
     }
 
     public void QuitGame()
     {
+        AudioManager.PlayMainMenu();
         GameManager.EnsureInstance().QuitGame();
     }
 }

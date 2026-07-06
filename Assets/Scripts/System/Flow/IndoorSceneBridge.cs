@@ -96,16 +96,19 @@ public class IndoorSceneBridge : MonoBehaviour
 
     public void GoOutdoor()
     {
+        AudioManager.PlayGenericButton();
         GameManager.EnsureInstance().EnterOtherWorld();
     }
 
     public void GoKitchen()
     {
+        AudioManager.PlayGenericButton();
         GameManager.EnsureInstance().StartLiveStreamGameplay();
     }
 
     public void ReturnToMainMenu()
     {
+        AudioManager.PlayMainMenu();
         GameManager.EnsureInstance().ReturnToMainMenu();
     }
 

@@ -53,6 +53,7 @@ public class BtnClick : MonoBehaviour
 
     public void HandleClick()
     {
+        AudioManager.PlayPop();
         PlayClickAnimation();
         EmitEffects();
     }

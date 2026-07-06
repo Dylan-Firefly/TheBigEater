@@ -94,6 +94,7 @@ public class OpeningChapterController : MonoBehaviour
 
     public void ChooseKeepStatus()
     {
+        AudioManager.PlayGenericButton();
         GameManager.EnsureInstance().ChooseOpeningBranch(OpeningChoice.KeepStatus);
         SetActive(choicePanel, false);
         SetActive(gameOverPanel, true);
@@ -108,6 +109,7 @@ public class OpeningChapterController : MonoBehaviour
 
     public void ChooseTransformHome()
     {
+        AudioManager.PlayGenericButton();
         GameManager.EnsureInstance().ChooseOpeningBranch(OpeningChoice.TransformHome);
         SetActive(choicePanel, false);
         if (transformDialogue != null)
