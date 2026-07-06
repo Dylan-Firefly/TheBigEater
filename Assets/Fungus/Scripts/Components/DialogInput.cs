@@ -1,7 +1,7 @@
 // This code is part of the Fungus library (https://github.com/snozbot/fungus)
 // It is released for free under the MIT open source license (https://github.com/snozbot/fungus/blob/master/LICENSE)
 
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 namespace Fungus
@@ -86,18 +86,7 @@ namespace Fungus
 
             if (writer != null && HasNextLineInput())
             {
-<<<<<<< HEAD
-                if (currentStandaloneInputModule != null)
-                {
-                    if (Input.GetButtonDown(currentStandaloneInputModule.submitButton) ||
-                        (cancelEnabled && Input.GetButton(currentStandaloneInputModule.cancelButton)))
-                    {
-                        SetNextLineFlag();
-                    }
-                }
-=======
                 SetNextLineFlag();
->>>>>>> 8c2c69c6eed4f8e7edf7add8c587fa25897a0114
             }
 
             switch (clickMode)
