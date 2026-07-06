@@ -1783,7 +1783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 1.89, y: -1.4799999}
+  m_AnchoredPosition: {x: -1.01, y: -1.4799999}
   m_SizeDelta: {x: 3840, y: 2160}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &953900478
@@ -2342,7 +2342,7 @@ Transform:
   m_GameObject: {fileID: 1774871586}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -85.86, y: -4.5, z: -10}
+  m_LocalPosition: {x: -50.82, y: -4.5, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2730,6 +2730,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 5-3
       objectReference: {fileID: 0}
+    - target: {fileID: 3269028809477169223, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 15.81
+      objectReference: {fileID: 0}
     - target: {fileID: 3866884335596001536, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
       value: HomeTrigger
@@ -2796,11 +2800,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6209930958399465889, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 10.26
+      value: 9.6
       objectReference: {fileID: 0}
     - target: {fileID: 6524372684127390455, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
       value: 5-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008297588886571121, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Size.x
+      value: 5.873151
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008297588886571121, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.16395271
+      objectReference: {fileID: 0}
+    - target: {fileID: 7008297588886571121, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.1849227
       objectReference: {fileID: 0}
     - target: {fileID: 7477957220583175718, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
@@ -3116,7 +3132,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1753432464452270301, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -85.86
+      value: -50.82
       objectReference: {fileID: 0}
     - target: {fileID: 1753432464452270301, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
       propertyPath: m_LocalPosition.y
