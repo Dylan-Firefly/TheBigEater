@@ -88,7 +88,13 @@ public class GameManager : MonoBehaviour
 
     public void OnOpeningChapterFinished()
     {
-        EnterIndoorFlow();
+        EnterCountrysideFlow();
+    }
+
+    public void EnterCountrysideFlow()
+    {
+        SetState(GameFlowState.Countryside);
+        SceneLoader.Load(GameSceneId.Countryside);
     }
 
     public void EnterIndoorFlow()
