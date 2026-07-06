@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class BtnClick : MonoBehaviour
 {
@@ -17,9 +18,17 @@ public class BtnClick : MonoBehaviour
     [Header("Effects")]
     [SerializeField] private FloatingFxEmitter[] fxEmitters;
 
+    [Header("Counter")]
+    [SerializeField] private bool incrementTextOnClick;
+    [SerializeField] private TMP_Text counterText;
+    [SerializeField] private string counterPrefix = "x";
+    [SerializeField] private int counterStartValue = 666;
+    [SerializeField] private bool resetCounterOnEnable = true;
+
     private int clickTriggerHash;
     private int clickStateHash;
     private int clickStateFullPathHash;
+    private int currentCounterValue;
 
     private void Awake()
     {
@@ -43,6 +52,15 @@ public class BtnClick : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        if (resetCounterOnEnable)
+        {
+            currentCounterValue = counterStartValue;
+            RefreshCounterText();
+        }
+    }
+
     private void OnDestroy()
     {
         if (bindButtonOnAwake && button != null)
@@ -54,8 +72,30 @@ public class BtnClick : MonoBehaviour
     public void HandleClick()
     {
         AudioManager.PlayPop();
+        IncrementCounter();
         PlayClickAnimation();
         EmitEffects();
+    }
+
+    private void IncrementCounter()
+    {
+        if (!incrementTextOnClick)
+        {
+            return;
+        }
+
+        currentCounterValue++;
+        RefreshCounterText();
+    }
+
+    private void RefreshCounterText()
+    {
+        if (!incrementTextOnClick || counterText == null)
+        {
+            return;
+        }
+
+        counterText.text = counterPrefix + currentCounterValue;
     }
 
     private void PlayClickAnimation()

@@ -494,6 +494,11 @@ MonoBehaviour:
   replayStateFromStart: 1
   fxEmitters:
   - {fileID: 3601193113491163371}
+  incrementTextOnClick: 1
+  counterText: {fileID: 6674352000435956128}
+  counterPrefix: x
+  counterStartValue: 666
+  resetCounterOnEnable: 1
 --- !u!1 &2701615775074657058
 GameObject:
   m_ObjectHideFlags: 0
