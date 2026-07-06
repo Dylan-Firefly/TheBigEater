@@ -6,18 +6,28 @@ public class Npc1 : MonoBehaviour
 {
     public GameObject Dialog;
     public string dialogBlock = "Click Pen";//点击笔跳转的Bloc块对话
+    public bool isChat=false ;
 
     private void Awake()
     {
         Dialog.SetActive(false);
     }
 
+    private void Update()
+    {
+        if (isChat&&Input .GetKeyDown (KeyCode.F ))
+        {
+            Dialog.SetActive(true);
+            isChat = false;
+        }
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision .gameObject .CompareTag("Player"))
         {
-            Debug.Log(1);
-            Dialog.SetActive(true);
+            isChat = true;
+            Debug.Log(1);            
         }
     }
 
