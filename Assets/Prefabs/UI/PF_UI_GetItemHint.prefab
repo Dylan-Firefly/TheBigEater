@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8135021463800000010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8135021463800000011}
+  - component: {fileID: 8135021463800000012}
+  - component: {fileID: 8135021463800000013}
+  - component: {fileID: 8135021463800000014}
+  - component: {fileID: 8135021463800000015}
+  m_Layer: 5
+  m_Name: PF_UI_GetItemHint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &8135021463800000011
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135021463800000010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 180}
+  m_SizeDelta: {x: 388, y: 120}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!222 &8135021463800000012
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135021463800000010}
+  m_CullTransparentMesh: 1
+--- !u!114 &8135021463800000013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135021463800000010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 0
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: -7436659059950854761, guid: 769f437d2ec8aa84ab149fe420d5a7a1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!225 &8135021463800000014
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135021463800000010}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &8135021463800000015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8135021463800000010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f9a4c0bc96f4cd1a76e6af7d65f0f31, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  hintImage: {fileID: 8135021463800000013}
+  canvasGroup: {fileID: 8135021463800000014}
+  itemHints:
+  - itemId: pork_belly
+    sprite: {fileID: 430708438554321228, guid: 76ccf79c84ba37247b39dbc3866837a0, type: 3}
+  - itemId: wuchang_fish
+    sprite: {fileID: 1110363247672747464, guid: 7cf7d021e12c61d42b3f5592fd416463, type: 3}
+  - itemId: apple
+    sprite: {fileID: -990624257938835317, guid: 6b42a6fb35a8f3140a27a6d55839e77a, type: 3}
+  - itemId: dried_shrimp
+    sprite: {fileID: -978779158236853006, guid: a18f2d82cf1d24f4a9c139cacf4a7a68, type: 3}
+  - itemId: dried_tofu
+    sprite: {fileID: 7528875466763666245, guid: dffb5343f3cd9b049bc44b3380e99386, type: 3}
+  - itemId: mushroom
+    sprite: {fileID: 2018507859888493145, guid: 9d2541b5fe820b6429c8803767f7ad9c, type: 3}
+  - itemId: egg
+    sprite: {fileID: -7436659059950854761, guid: 769f437d2ec8aa84ab149fe420d5a7a1, type: 3}
+  - itemId: recipe
+    sprite: {fileID: -3650470979262217819, guid: cc2f77f45659e5f4cad714b281602667, type: 3}
+  defaultVisibleSeconds: 1.5
+  hideOnAwake: 1
+  resizeToSpriteRect: 1
+  useUnscaledTime: 1
+  logMissingItem: 1
+  debugItemId: egg
