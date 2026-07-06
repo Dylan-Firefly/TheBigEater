@@ -411,7 +411,7 @@ GameObject:
   - component: {fileID: 3437708632107232054}
   - component: {fileID: 1403427478487846428}
   m_Layer: 0
-  m_Name: Gound
+  m_Name: Bound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -686,11 +686,11 @@ Transform:
   m_GameObject: {fileID: 1136349516466673492}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 39.889267, y: 0.5299313, z: 0}
-  m_LocalScale: {x: 0.6896551, y: 0.6896551, z: 1}
+  m_LocalPosition: {x: 1.1493225, y: 1.3348861, z: 0}
+  m_LocalScale: {x: 0.68965507, y: 0.68965507, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3261834710296980628}
+  m_Father: {fileID: 2566148154290476690}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4141078790024426804
 SpriteRenderer:
@@ -1009,38 +1009,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &1342449573807890457
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3261834710296980628}
-  m_Layer: 0
-  m_Name: Dialog
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &3261834710296980628
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1342449573807890457}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -38.739944, y: 0.80495477, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 6525214240610242254}
-  m_Father: {fileID: 2566148154290476690}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1369600559037832040
 GameObject:
   m_ObjectHideFlags: 0
@@ -2610,6 +2578,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 8359793738802234470}
   dialogBlock: 
+  isChat: 0
 --- !u!1 &7514439469774276408
 GameObject:
   m_ObjectHideFlags: 0
@@ -3352,7 +3321,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3261834710296980628}
+  - {fileID: 6525214240610242254}
   m_Father: {fileID: 2563593399359207131}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &7837586620798504931

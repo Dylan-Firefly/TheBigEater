@@ -1,5 +1,6 @@
 using Fungus;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
 public class Npc1 : MonoBehaviour
@@ -27,11 +28,20 @@ public class Npc1 : MonoBehaviour
         if (collision .gameObject .CompareTag("Player"))
         {
             isChat = true;
-            Debug.Log(1);            
+            //Debug.Log(1);            
         }
     }
 
-    public void Onclick()
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            isChat = false ;
+            //Debug.Log(2);
+        }
+    }
+
+    public void Onclick1()
     {
         Dialog.SetActive(false);
         Flowchart flowchart = GameObject.Find("Flowchart").GetComponent<Flowchart>();
@@ -41,5 +51,9 @@ public class Npc1 : MonoBehaviour
          //flowchart.StopAllBlocks();//停止其他的Block对话调用
             flowchart.ExecuteBlock(dialogBlock);//执行对话
         }
+    }
+    public void Onclick2()
+    {
+        Dialog.SetActive(false);
     }
 }
