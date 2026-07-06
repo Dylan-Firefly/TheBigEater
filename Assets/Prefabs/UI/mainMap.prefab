@@ -1195,6 +1195,7 @@ GameObject:
   - component: {fileID: 8497240588117515902}
   - component: {fileID: 2663751148352245690}
   - component: {fileID: 8102800467196295942}
+  - component: {fileID: 2440251898110664699}
   m_Layer: 0
   m_Name: Market
   m_TagString: Untagged
@@ -1291,6 +1292,39 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2440251898110664699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2440251898110664605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3f0c5d8b8d4c1c86c5ac8764e9a01f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  portalMode: 0
+  targetPoint: {fileID: 0}
+  targetPointName: MarketPoint
+  sceneToLoad: 4
+  promptRoot: {fileID: 0}
+  useFirstChildAsPrompt: 1
+  hidePromptOnAwake: 1
+  legacyInteractKey: 102
+  requirePlayerTag: 1
+  playerTag: Player
+  useProximityFallback: 1
+  proximityDistance: 3
+  playerFallback: {fileID: 0}
+  playerFallbackName: Player
+  switchCameraOnActivate: 1
+  activeCamera: {fileID: 0}
+  activeCameraName: MarketCinemachineCamera
+  inactiveCamera: {fileID: 0}
+  inactiveCameraName: MainStreetCinemachineCamera
+  activeCameraPriority: 20
+  inactiveCameraPriority: 0
 --- !u!1 &2533419194786394761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2189,6 +2223,7 @@ GameObject:
   - component: {fileID: 3269028809477169223}
   - component: {fileID: 3441325527711790964}
   - component: {fileID: 7008297588886571121}
+  - component: {fileID: 3866884335596001599}
   m_Layer: 0
   m_Name: Home
   m_TagString: Untagged
@@ -2285,6 +2320,39 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 9.095394, y: 6.2835264}
   m_EdgeRadius: 0
+--- !u!114 &3866884335596001599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3866884335596001536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ad3f0c5d8b8d4c1c86c5ac8764e9a01f, type: 3}
+  m_Name:
+  m_EditorClassIdentifier:
+  portalMode: 1
+  targetPoint: {fileID: 0}
+  targetPointName:
+  sceneToLoad: 4
+  promptRoot: {fileID: 0}
+  useFirstChildAsPrompt: 1
+  hidePromptOnAwake: 1
+  legacyInteractKey: 102
+  requirePlayerTag: 1
+  playerTag: Player
+  useProximityFallback: 1
+  proximityDistance: 3
+  playerFallback: {fileID: 0}
+  playerFallbackName: Player
+  switchCameraOnActivate: 0
+  activeCamera: {fileID: 0}
+  activeCameraName:
+  inactiveCamera: {fileID: 0}
+  inactiveCameraName:
+  activeCameraPriority: 20
+  inactiveCameraPriority: 0
 --- !u!1 &3956591211195381248
 GameObject:
   m_ObjectHideFlags: 0

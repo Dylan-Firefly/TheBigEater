@@ -10,6 +10,7 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private string openingStreamingScene = "OpeningStreaming";
     [SerializeField] private string countrysideScene = "OtherWorld";
     [SerializeField] private string otherWorldScene = "OtherWorld";
+    [SerializeField] private string marketScene = "MarketScene";
     [SerializeField] private string indoorScene = "IndoorScene";
     [SerializeField] private string liveStreamGameplayScene = "StreamGameplay";
     [SerializeField] private string phoneGameplayScene = "IndoorScene";
@@ -44,6 +45,7 @@ public class SceneLoader : MonoBehaviour
             GameSceneId.OpeningStreaming => openingStreamingScene,
             GameSceneId.Countryside => countrysideScene,
             GameSceneId.OtherWorld => otherWorldScene,
+            GameSceneId.Market => marketScene,
             GameSceneId.Indoor => indoorScene,
             GameSceneId.LiveStreamGameplay => liveStreamGameplayScene,
             GameSceneId.PhoneGameplay => phoneGameplayScene,

@@ -1,4 +1,5 @@
 using Fungus;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -13,13 +14,22 @@ public class Npc1 : MonoBehaviour
     [SerializeField] private Flowchart flowchart;
     [SerializeField] private string fallbackFlowchartName = "mainMapFlowchart";
 
+    [Header("Reward Hint")]
+    [SerializeField] private bool showItemHintOnComplete = true;
+    [SerializeField] private GetItemHintController itemHint;
+    [SerializeField] private string itemHintId = "egg";
+    [SerializeField, Min(0f)] private float itemHintDelaySeconds;
+
     private readonly List<GameObject> dialogSteps = new List<GameObject>();
     private int currentDialogStep = -1;
     private int lastHandledPointerFrame = -1;
     private bool playerBlockExecuted;
+    private bool dialogOpenedByPlayer;
+    private bool itemHintShownForCurrentDialog;
 
     private void Awake()
     {
+        EnsureEventSystem();
         EnsurePhysics2DRaycaster();
         CacheDialogSteps();
         HideDialog();
@@ -98,6 +108,8 @@ public class Npc1 : MonoBehaviour
         CacheDialogSteps();
         Dialog.SetActive(true);
         playerBlockExecuted = false;
+        dialogOpenedByPlayer = true;
+        itemHintShownForCurrentDialog = false;
         ShowDialogStep(0);
     }
 
@@ -128,7 +140,7 @@ public class Npc1 : MonoBehaviour
             return;
         }
 
-        HideDialog();
+        CompleteDialog();
     }
 
     private void HideDialog()
@@ -140,6 +152,18 @@ public class Npc1 : MonoBehaviour
 
         Dialog.SetActive(false);
         currentDialogStep = -1;
+    }
+
+    private void CompleteDialog()
+    {
+        bool shouldShowHint = dialogOpenedByPlayer && !itemHintShownForCurrentDialog;
+        HideDialog();
+        dialogOpenedByPlayer = false;
+
+        if (shouldShowHint)
+        {
+            ShowRewardHint();
+        }
     }
 
     private void ShowDialogStep(int index)
@@ -156,7 +180,14 @@ public class Npc1 : MonoBehaviour
         {
             if (dialogSteps[i] != null)
             {
-                dialogSteps[i].SetActive(i == currentDialogStep);
+                bool shouldShow = i == currentDialogStep;
+                dialogSteps[i].SetActive(shouldShow);
+
+                Npc2 clickableBubble = dialogSteps[i].GetComponent<Npc2>();
+                if (clickableBubble != null)
+                {
+                    clickableBubble.SetVisible(shouldShow);
+                }
             }
         }
     }
@@ -276,6 +307,30 @@ public class Npc1 : MonoBehaviour
         mainCamera.gameObject.AddComponent<Physics2DRaycaster>();
     }
 
+    private static void EnsureEventSystem()
+    {
+        if (EventSystem.current != null)
+        {
+            return;
+        }
+
+        EventSystem existingEventSystem = Object.FindFirstObjectByType<EventSystem>(FindObjectsInactive.Include);
+        if (existingEventSystem != null)
+        {
+            existingEventSystem.gameObject.SetActive(true);
+            return;
+        }
+
+        GameObject eventSystemObject = new GameObject("EventSystem");
+        eventSystemObject.AddComponent<EventSystem>();
+
+#if ENABLE_INPUT_SYSTEM
+        eventSystemObject.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
+#elif ENABLE_LEGACY_INPUT_MANAGER
+        eventSystemObject.AddComponent<StandaloneInputModule>();
+#endif
+    }
+
     private void ExecutePlayerBlockOnce()
     {
         if (playerBlockExecuted || string.IsNullOrWhiteSpace(dialogBlock))
@@ -297,7 +352,128 @@ public class Npc1 : MonoBehaviour
             return;
         }
 
-        playerBlockExecuted = targetFlowchart.ExecuteBlock(block);
+        PrepareSayDialogsForExecution();
+        playerBlockExecuted = targetFlowchart.ExecuteBlock(block, 0, HandlePlayerBlockComplete);
+    }
+
+    private void HandlePlayerBlockComplete()
+    {
+        StartCoroutine(CleanupFinishedSayDialogs());
+    }
+
+    private IEnumerator CleanupFinishedSayDialogs()
+    {
+        yield return null;
+
+        SayDialog[] sayDialogs = Object.FindObjectsByType<SayDialog>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (SayDialog sayDialog in sayDialogs)
+        {
+            if (sayDialog == null)
+            {
+                continue;
+            }
+
+            Fungus.Writer writer = sayDialog.GetComponent<Fungus.Writer>();
+            if (writer != null && (writer.IsWriting || writer.IsWaitingForInput))
+            {
+                continue;
+            }
+
+            sayDialog.Clear();
+            sayDialog.SetCharacter(null);
+            sayDialog.FadeWhenDone = true;
+            RestoreSayDialogVisibility(sayDialog);
+            sayDialog.SetActive(false);
+        }
+    }
+
+    private static void PrepareSayDialogsForExecution()
+    {
+        SayDialog[] sayDialogs = Object.FindObjectsByType<SayDialog>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        foreach (SayDialog sayDialog in sayDialogs)
+        {
+            if (sayDialog == null)
+            {
+                continue;
+            }
+
+            Transform dialogTransform = sayDialog.transform;
+            bool hiddenByScale = dialogTransform.localScale.sqrMagnitude <= 0.0001f;
+            bool inactive = !sayDialog.gameObject.activeInHierarchy;
+            if (hiddenByScale || inactive)
+            {
+                RestoreSayDialogVisibility(sayDialog);
+            }
+        }
+    }
+
+    private static void RestoreSayDialogVisibility(SayDialog sayDialog)
+    {
+        if (sayDialog == null)
+        {
+            return;
+        }
+
+        Transform dialogTransform = sayDialog.transform;
+        if (dialogTransform.localScale.sqrMagnitude <= 0.0001f)
+        {
+            dialogTransform.localScale = Vector3.one;
+        }
+
+        CanvasGroup canvasGroup = sayDialog.GetComponent<CanvasGroup>();
+        if (canvasGroup != null)
+        {
+            canvasGroup.alpha = 1f;
+            canvasGroup.interactable = true;
+            canvasGroup.blocksRaycasts = true;
+        }
+    }
+
+    private void ShowRewardHint()
+    {
+        if (!showItemHintOnComplete)
+        {
+            return;
+        }
+
+        itemHintShownForCurrentDialog = true;
+
+        if (itemHintDelaySeconds > 0f)
+        {
+            StartCoroutine(ShowRewardHintAfterDelay());
+            return;
+        }
+
+        TryShowRewardHint();
+    }
+
+    private IEnumerator ShowRewardHintAfterDelay()
+    {
+        yield return new WaitForSecondsRealtime(itemHintDelaySeconds);
+        TryShowRewardHint();
+    }
+
+    private void TryShowRewardHint()
+    {
+        GetItemHintController targetHint = ResolveItemHint();
+        if (targetHint == null)
+        {
+            Debug.LogWarning($"[Npc1] No GetItemHintController found for reward hint on {name}.", this);
+            return;
+        }
+
+        targetHint.TryShowItem(itemHintId);
+    }
+
+    private GetItemHintController ResolveItemHint()
+    {
+        if (itemHint != null)
+        {
+            return itemHint;
+        }
+
+        itemHint = Object.FindFirstObjectByType<GetItemHintController>(FindObjectsInactive.Include);
+        return itemHint;
     }
 
     private Flowchart ResolveFlowchart()

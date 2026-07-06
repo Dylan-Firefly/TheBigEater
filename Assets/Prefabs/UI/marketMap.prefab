@@ -183,6 +183,12 @@ MonoBehaviour:
   Dialog: {fileID: 2151923531419694445}
   dialogBlock: "\u5356\u852C\u83DC\u963F\u59E8"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &1276443052770794743
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +318,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -1.0446625, y: -0.4680283}
+  m_Offset: {x: -0.16350651, y: -0.4680283}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -322,7 +328,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.8924828, y: 2.4125295}
+  m_Size: {x: 2.949873, y: 2.4125295}
   m_EdgeRadius: 0
 --- !u!50 &6668468526361689267
 Rigidbody2D:
@@ -366,6 +372,12 @@ MonoBehaviour:
   Dialog: {fileID: 5762543976620625337}
   dialogBlock: "\u548C\u5C0F\u5B692"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &1338203428944233946
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,6 +561,12 @@ MonoBehaviour:
   Dialog: {fileID: 7072060605858290265}
   dialogBlock: "\u6742\u8D27\u94FA\u963F\u59E8"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &1397476329141459989
 GameObject:
   m_ObjectHideFlags: 0
@@ -853,6 +871,12 @@ MonoBehaviour:
   Dialog: {fileID: 4624755223297145367}
   dialogBlock: "\u7F57\u6C49\u679C\u8001\u5934"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &2151923531419694445
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1021,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2302592377363675116}
           m_TargetAssemblyTypeName: Npc1, Assembly-CSharp
-          m_MethodName: Onclick
+          m_MethodName: Onclick2
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1388,7 +1412,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 8402757813462835946}
           m_TargetAssemblyTypeName: Npc1, Assembly-CSharp
-          m_MethodName: Onclick
+          m_MethodName: Onclick1
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1857,6 +1881,12 @@ MonoBehaviour:
   Dialog: {fileID: 1397476329141459989}
   dialogBlock: "\u732A\u8089\u4F6C"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &7021142002584064330
 GameObject:
   m_ObjectHideFlags: 0
@@ -2193,6 +2223,12 @@ MonoBehaviour:
   Dialog: {fileID: 3240187263331067784}
   dialogBlock: "\u6C34\u751F"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &8274184773410763868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2304,7 +2340,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2302592377363675116}
           m_TargetAssemblyTypeName: Npc1, Assembly-CSharp
-          m_MethodName: Onclick
+          m_MethodName: Onclick1
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -2443,7 +2479,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.5525732, y: -0.36916685}
+  m_Offset: {x: 1.5207338, y: -0.36916685}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2453,7 +2489,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 2.1266117, y: 2.530439}
+  m_Size: {x: 3.370596, y: 2.530439}
   m_EdgeRadius: 0
 --- !u!50 &7468274157978406047
 Rigidbody2D:
@@ -2497,6 +2533,12 @@ MonoBehaviour:
   Dialog: {fileID: 5856048771749147401}
   dialogBlock: "\u8001\u5976\u5976"
   isChat: 0
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  showItemHintOnComplete: 1
+  itemHint: {fileID: 0}
+  itemHintId: recipe
+  itemHintDelaySeconds: 0
 --- !u!1 &8675544187410552919
 GameObject:
   m_ObjectHideFlags: 0
@@ -2608,7 +2650,7 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 8402757813462835946}
           m_TargetAssemblyTypeName: Npc1, Assembly-CSharp
-          m_MethodName: Onclick
+          m_MethodName: Onclick2
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

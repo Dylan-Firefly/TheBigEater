@@ -6,7 +6,8 @@ public enum GameSceneId
     OtherWorld,
     Indoor,
     LiveStreamGameplay,
-    PhoneGameplay
+    PhoneGameplay,
+    Market
 }
 
 public enum GameFlowState
