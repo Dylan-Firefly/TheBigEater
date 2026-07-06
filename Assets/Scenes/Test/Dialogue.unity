@@ -634,6 +634,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: ChoicePanel
       objectReference: {fileID: 0}
+    - target: {fileID: 5867370678388107116, guid: b3d6dc69747484c41ad0c3be30569f7e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
