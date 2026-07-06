@@ -1667,7 +1667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 2094280711}
-  dialog: "\u732A\u8089\u4F6C"
+  dialogBlock: Click Pen
 --- !u!4 &281992692 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2566148154290476690, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
@@ -2170,7 +2170,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 1567467732}
-  dialog: "\u5356\u852C\u83DC\u963F\u59E8"
+  dialogBlock: Click Pen
 --- !u!1 &422296607
 GameObject:
   m_ObjectHideFlags: 0
@@ -4979,7 +4979,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 970150484}
-  dialog: "\u6742\u8D27\u94FA\u963F\u59E8"
+  dialogBlock: Click Pen
 --- !u!1 &653969742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8475620143261569232, guid: 72135da29b444594792d6f2875e2236b, type: 3}
@@ -5003,7 +5003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 2086844332}
-  dialog: "\u8001\u5976\u5976"
+  dialogBlock: Click Pen
 --- !u!1 &693971096
 GameObject:
   m_ObjectHideFlags: 0
@@ -6177,7 +6177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 1887603478}
-  dialog: "\u6C34\u751F"
+  dialogBlock: Click Pen
 --- !u!1 &879696822
 GameObject:
   m_ObjectHideFlags: 0
@@ -8762,7 +8762,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 1683626337}
-  dialog: "\u548C\u5C0F\u5B692"
+  dialogBlock: Click Pen
 --- !u!1 &1546186604
 GameObject:
   m_ObjectHideFlags: 0
@@ -9525,7 +9525,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Npc1
   Dialog: {fileID: 886814260}
-  dialog: "\u7F57\u6C49\u679C\u8001\u5934"
+  dialogBlock: Click Pen
 --- !u!1 &1774871586
 GameObject:
   m_ObjectHideFlags: 0

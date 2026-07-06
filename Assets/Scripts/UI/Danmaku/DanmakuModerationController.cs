@@ -192,6 +192,7 @@ public class DanmakuModerationController : MonoBehaviour
 
     private void ConfirmFirstNegativePrompt()
     {
+        AudioManager.PlayGenericButton();
         firstNegativePromptOpen = false;
         SetFirstNegativePromptVisible(false);
 
@@ -233,6 +234,7 @@ public class DanmakuModerationController : MonoBehaviour
             SetGuideVisible(false);
         }
 
+        AudioManager.PlayGenericButton();
         if (moderationPopup != null)
         {
             moderationPopup.Show(item, MuteDanmaku, CancelMute);

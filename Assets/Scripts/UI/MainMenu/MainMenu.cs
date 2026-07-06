@@ -1,40 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Playables;
-using UnityEngine.SceneManagement;
+锘縰sing UnityEngine;
 using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
-    Button newGameBtn;
-    Button contineBtn;
-    Button quitBtn;
+    [Header("Buttons")]
+    [SerializeField] private Button newGameButton;
+    [SerializeField] private Button saveButton;
+    [SerializeField] private Button quitButton;
 
-
-    private void Awake()
+    private void OnEnable()
     {
-        newGameBtn = transform.GetChild(0).GetComponent<Button>();
-        contineBtn = transform.GetChild(1).GetComponent<Button>();
-        quitBtn = transform.GetChild(2).GetComponent<Button>();
+        if (newGameButton != null)
+        {
+            newGameButton.onClick.AddListener(StartNewGame);
+        }
 
+        if (saveButton != null)
+        {
+            saveButton.interactable = false;
+        }
 
-        newGameBtn.onClick.AddListener(startPlay);
-        contineBtn.onClick.AddListener(load);
-        quitBtn.onClick.AddListener(exit);
-    }
-    public void startPlay()
-    {
-        SceneManager.LoadScene("zhibo");
-    }
-
-    public void load()
-    {
-
+        if (quitButton != null)
+        {
+            quitButton.onClick.AddListener(QuitGame);
+        }
     }
 
-    public void exit()
+    private void OnDisable()
     {
-        Application.Quit();//只在打包导出程序的时候才会调用直接关闭游戏
+        if (newGameButton != null)
+        {
+            newGameButton.onClick.RemoveListener(StartNewGame);
+        }
+
+        if (quitButton != null)
+        {
+            quitButton.onClick.RemoveListener(QuitGame);
+        }
+    }
+
+    public void StartNewGame()
+    {
+        AudioManager.PlayMainMenu();
+        GameManager.EnsureInstance().StartNewGame();
+    }
+
+    public void QuitGame()
+    {
+        AudioManager.PlayMainMenu();
+        GameManager.EnsureInstance().QuitGame();
     }
 }

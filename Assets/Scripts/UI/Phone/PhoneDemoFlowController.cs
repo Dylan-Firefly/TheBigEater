@@ -57,6 +57,7 @@ public class PhoneDemoFlowController : MonoBehaviour
     public event Action PostPublished;
     public event Action<int, int, float> PkStarted;
     public event Action<int, int, float, bool> PkCompleted;
+    public event Action<int, int, float, bool> FinalResultConfirmed;
 
     private void Awake()
     {
@@ -121,6 +122,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneOpen();
         pageNavigator?.SetPhonePanelVisible(true);
         SetActive(phoneButton != null ? phoneButton.gameObject : null, !hidePhoneButtonWhileOpen);
         SetReturnButtonsVisible(true);
@@ -161,6 +163,16 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     public void OpenPostApp()
     {
+        OpenPostApp(true);
+    }
+
+    private void OpenPostApp(bool playSound)
+    {
+        if (playSound)
+        {
+            AudioManager.PlayPhoneButton();
+        }
+
         StopResultFlow();
         postController?.CloseDraft();
         commonPageScrollTrigger?.ResetTrigger();
@@ -178,6 +190,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         pageNavigator?.ShowProfile();
         SetReturnButtonsVisible(true);
         State = PhoneDemoState.DraftPost;
@@ -190,6 +203,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         pageNavigator?.ShowProfile();
         SetReturnButtonsVisible(true);
         State = PhoneDemoState.Profile;
@@ -198,10 +212,20 @@ public class PhoneDemoFlowController : MonoBehaviour
 
     public void OpenPostDetail()
     {
+        OpenPostDetail(true);
+    }
+
+    private void OpenPostDetail(bool playSound)
+    {
         if (postController != null && !postController.CanOpenPublishedPost)
         {
             Debug.Log("[PhoneDemoFlow] Cannot open post detail before a post is published.");
             return;
+        }
+
+        if (playSound)
+        {
+            AudioManager.PlayPhoneButton();
         }
 
         StopResultFlow();
@@ -226,6 +250,7 @@ public class PhoneDemoFlowController : MonoBehaviour
             return;
         }
 
+        AudioManager.PlayPhoneButton();
         pageNavigator?.ShowPkPage();
         commentRevealController?.StartReveal();
         SetButtonInteractable(startPkButton, false);
@@ -240,19 +265,20 @@ public class PhoneDemoFlowController : MonoBehaviour
     {
         if (State == PhoneDemoState.FinalResult)
         {
-            OpenPostApp();
+            ConfirmFinalResult();
             return;
         }
 
+        AudioManager.PlayBack();
         if (State == PhoneDemoState.PkRunning)
         {
-            OpenPostDetail();
+            OpenPostDetail(false);
             return;
         }
 
         if (State == PhoneDemoState.PostDetail)
         {
-            OpenPostApp();
+            OpenPostApp(false);
             return;
         }
 
@@ -274,6 +300,24 @@ public class PhoneDemoFlowController : MonoBehaviour
         {
             ClosePhone();
         }
+    }
+
+    public void ConfirmFinalResult()
+    {
+        if (State != PhoneDemoState.FinalResult)
+        {
+            Back();
+            return;
+        }
+
+        AudioManager.PlayPhoneButton();
+        if (FinalResultConfirmed != null)
+        {
+            FinalResultConfirmed.Invoke(LastGoodCount, LastBadCount, LastGoodRatio, LastResultWasGood);
+            return;
+        }
+
+        OpenPostApp(false);
     }
 
     private void HandleResultPromptUnlocked()
@@ -364,7 +408,7 @@ public class PhoneDemoFlowController : MonoBehaviour
         {
             if (resultReturnButton != null)
             {
-                resultReturnButton.onClick.AddListener(Back);
+                resultReturnButton.onClick.AddListener(ConfirmFinalResult);
             }
         }
 
@@ -428,7 +472,7 @@ public class PhoneDemoFlowController : MonoBehaviour
         {
             if (resultReturnButton != null)
             {
-                resultReturnButton.onClick.RemoveListener(Back);
+                resultReturnButton.onClick.RemoveListener(ConfirmFinalResult);
             }
         }
 

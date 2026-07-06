@@ -121,6 +121,7 @@ public class DanmakuModerationPopup : MonoBehaviour
 
     private void HandleMuteClicked()
     {
+        AudioManager.PlayNegative();
         DanmakuItemView currentTarget = target;
         Action<DanmakuItemView> currentMuteRequested = muteRequested;
         Hide();
@@ -132,6 +133,7 @@ public class DanmakuModerationPopup : MonoBehaviour
 
     private void HandleCancelClicked()
     {
+        AudioManager.PlayBack();
         DanmakuItemView currentTarget = target;
         Action<DanmakuItemView> currentCancelRequested = cancelRequested;
         Hide();

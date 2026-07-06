@@ -84,8 +84,9 @@ namespace Fungus
                 currentStandaloneInputModule = EventSystem.current.GetComponent<StandaloneInputModule>();
             }
 
-            if (writer != null)
+            if (writer != null && HasNextLineInput())
             {
+<<<<<<< HEAD
                 if (currentStandaloneInputModule != null)
                 {
                     if (Input.GetButtonDown(currentStandaloneInputModule.submitButton) ||
@@ -94,6 +95,9 @@ namespace Fungus
                         SetNextLineFlag();
                     }
                 }
+=======
+                SetNextLineFlag();
+>>>>>>> 8c2c69c6eed4f8e7edf7add8c587fa25897a0114
             }
 
             switch (clickMode)
@@ -101,7 +105,7 @@ namespace Fungus
             case ClickMode.Disabled:
                 break;
             case ClickMode.ClickAnywhere:
-                if (Input.GetMouseButtonDown(0))
+                if (HasPrimaryClickInput())
                 {
                     SetClickAnywhereClickedFlag();
                 }
@@ -203,6 +207,130 @@ namespace Fungus
             {
                 SetNextLineFlag();
             }
+        }
+
+        protected virtual bool HasNextLineInput()
+        {
+#if ENABLE_LEGACY_INPUT_MANAGER
+            if (currentStandaloneInputModule != null)
+            {
+                if (Input.GetButtonDown(currentStandaloneInputModule.submitButton))
+                {
+                    return true;
+                }
+
+                if (cancelEnabled && Input.GetButton(currentStandaloneInputModule.cancelButton))
+                {
+                    return true;
+                }
+            }
+#endif
+
+            object keyboard = GetInputSystemCurrentDevice("UnityEngine.InputSystem.Keyboard, Unity.InputSystem");
+            if (IsInputSystemControlPressed(keyboard, "enterKey") ||
+                IsInputSystemControlPressed(keyboard, "numpadEnterKey") ||
+                IsInputSystemControlPressed(keyboard, "spaceKey"))
+            {
+                return true;
+            }
+
+            if (cancelEnabled && IsInputSystemControlPressed(keyboard, "escapeKey"))
+            {
+                return true;
+            }
+
+            object gamepad = GetInputSystemCurrentDevice("UnityEngine.InputSystem.Gamepad, Unity.InputSystem");
+            if (IsInputSystemControlPressed(gamepad, "buttonSouth") ||
+                IsInputSystemControlPressed(gamepad, "startButton"))
+            {
+                return true;
+            }
+
+            if (cancelEnabled && IsInputSystemControlPressed(gamepad, "buttonEast"))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        protected virtual bool HasPrimaryClickInput()
+        {
+#if ENABLE_LEGACY_INPUT_MANAGER
+            if (Input.GetMouseButtonDown(0))
+            {
+                return true;
+            }
+#endif
+
+            object mouse = GetInputSystemCurrentDevice("UnityEngine.InputSystem.Mouse, Unity.InputSystem");
+            if (IsInputSystemControlPressed(mouse, "leftButton"))
+            {
+                return true;
+            }
+
+            object touchscreen = GetInputSystemCurrentDevice("UnityEngine.InputSystem.Touchscreen, Unity.InputSystem");
+            object primaryTouch = GetInputSystemControl(touchscreen, "primaryTouch");
+            object touchPress = GetInputSystemControl(primaryTouch, "press");
+            if (IsInputSystemControlPressed(touchPress))
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        protected virtual object GetInputSystemCurrentDevice(string typeName)
+        {
+            System.Type type = System.Type.GetType(typeName);
+            if (type == null)
+            {
+                return null;
+            }
+
+            System.Reflection.PropertyInfo currentProperty = type.GetProperty(
+                "current",
+                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Static);
+
+            return currentProperty != null ? currentProperty.GetValue(null, null) : null;
+        }
+
+        protected virtual object GetInputSystemControl(object deviceOrControl, string propertyName)
+        {
+            if (deviceOrControl == null)
+            {
+                return null;
+            }
+
+            System.Reflection.PropertyInfo property = deviceOrControl.GetType().GetProperty(
+                propertyName,
+                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+
+            return property != null ? property.GetValue(deviceOrControl, null) : null;
+        }
+
+        protected virtual bool IsInputSystemControlPressed(object deviceOrControl, string propertyName)
+        {
+            return IsInputSystemControlPressed(GetInputSystemControl(deviceOrControl, propertyName));
+        }
+
+        protected virtual bool IsInputSystemControlPressed(object control)
+        {
+            if (control == null)
+            {
+                return false;
+            }
+
+            System.Reflection.PropertyInfo wasPressedThisFrameProperty = control.GetType().GetProperty(
+                "wasPressedThisFrame",
+                System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
+
+            if (wasPressedThisFrameProperty == null || wasPressedThisFrameProperty.PropertyType != typeof(bool))
+            {
+                return false;
+            }
+
+            return (bool)wasPressedThisFrameProperty.GetValue(control, null);
         }
 
         #endregion
