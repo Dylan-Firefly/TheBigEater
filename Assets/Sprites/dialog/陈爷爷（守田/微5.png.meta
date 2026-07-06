@@ -109,12 +109,12 @@ TextureImporter:
       name: "\u5FAE5_0"
       rect:
         serializedVersion: 2
-        x: 632
-        y: 443
-        width: 514
-        height: 282
+        x: 628
+        y: 353
+        width: 524
+        height: 376
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -127,55 +127,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: "\u5FAE5_1"
-      rect:
-        serializedVersion: 2
-        x: 805
-        y: 383
-        width: 58
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b7ec014988eb37d40800000000000000
-      internalID: 5581013857051135611
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: "\u5FAE5_2"
-      rect:
-        serializedVersion: 2
-        x: 746
-        y: 354
-        width: 43
-        height: 43
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4bb3f1691e7a59600800000000000000
-      internalID: 474469923085564852
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2cd3e98ecc8721a4aae1e666881becff
     internalID: 0
     vertices: []
     indices: 
