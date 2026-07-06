@@ -80,4 +80,6 @@ Desktop.ini
 
 # Local project memory for Codex / development notes
 /Memory.md
-/Assets/Resources/Font
+
+# Local font assets that Unity/TMP rewrites and often cause conflicts
+/Assets/Resources/Font/

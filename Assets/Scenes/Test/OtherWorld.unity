@@ -4259,7 +4259,7 @@ MonoBehaviour:
   itemId: 93
   blockName: "\u5C0F\u7537\u5B69"
   description: 
-  eventHandler: {fileID: 509999063}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 509999061}
   suppressAllAutoSelections: 0
@@ -4270,7 +4270,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 509998972}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
   m_Name: 
@@ -4581,6 +4581,7 @@ GameObject:
   - component: {fileID: 693971097}
   - component: {fileID: 693971100}
   - component: {fileID: 693971101}
+  - component: {fileID: 693971102}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4738,6 +4739,22 @@ MonoBehaviour:
       m_PostInfinity: 2
       m_RotationOrder: 4
   CustomBlends: {fileID: 0}
+--- !u!114 &693971102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693971096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56666c5a40171f54783dd416a44f42bf, type: 3}
+  m_Name:
+  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.EventSystems.Physics2DRaycaster
+  m_EventMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_MaxRayIntersections: 0
 --- !u!1 &713391109 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1136349516466673492, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
