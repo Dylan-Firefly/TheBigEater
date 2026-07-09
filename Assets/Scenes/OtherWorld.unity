@@ -178,8 +178,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u8857\u9053"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
-  m_sharedMaterial: {fileID: -1271398758139532824, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -823,7 +823,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
   m_PrefabInstance: {fileID: 2885851227104699996}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7a334fe2ffb574b3583ff3b18b4792d3, type: 3}
@@ -1974,8 +1974,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u56DE\u5BB6"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
-  m_sharedMaterial: {fileID: -1271398758139532824, guid: df11973897116ff47bec6b3b4a6c6592, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2688,23 +2688,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 458758360245511114, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1193188710793414835, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1448763292538364471, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 4-1
+      value: 4c-1
       objectReference: {fileID: 0}
     - target: {fileID: 1674912925673947125, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 2
+      value: 2c
       objectReference: {fileID: 0}
     - target: {fileID: 1845840078755338196, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284431746482333076, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2440251898110664605, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
@@ -2716,19 +2720,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2571098750878176771, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 1
+      value: 1c
       objectReference: {fileID: 0}
     - target: {fileID: 2842941383557809839, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2932337306741462420, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 3
+      value: 3c
       objectReference: {fileID: 0}
     - target: {fileID: 3167959410696755935, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 5-3
+      value: 5c-3
       objectReference: {fileID: 0}
     - target: {fileID: 3269028809477169223, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2738,13 +2742,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: HomeTrigger
       objectReference: {fileID: 0}
+    - target: {fileID: 4141078790024426804, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4705685239412609758, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 5-1
+      value: 5c-1
       objectReference: {fileID: 0}
     - target: {fileID: 4764065963242194793, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 4-2
+      value: 4c-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4900421256193670716, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5080899972237710526, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2752,7 +2764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5331624231294845617, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5506441336154218434, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2796,7 +2808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5741887956549634469, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6209930958399465889, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2804,7 +2816,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6524372684127390455, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
-      value: 5-2
+      value: 5c-2
       objectReference: {fileID: 0}
     - target: {fileID: 7008297588886571121, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Size.x
@@ -2820,7 +2832,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7477957220583175718, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7533499090965889089, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8319939944565899743, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
@@ -2828,7 +2844,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8340613812492785632, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8497240588117515902, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2836,11 +2852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8853229324430424353, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8935799399132332552, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -2880,6 +2896,26 @@ Transform:
 --- !u!4 &2107930674 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8497240588117515902, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+  m_PrefabInstance: {fileID: 2107930671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2107930675 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 7533499090965889089, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+  m_PrefabInstance: {fileID: 2107930671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2107930676 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5331624231294845617, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+  m_PrefabInstance: {fileID: 2107930671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2107930677 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 8853229324430424353, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+  m_PrefabInstance: {fileID: 2107930671}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2107930678 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4141078790024426804, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
   m_PrefabInstance: {fileID: 2107930671}
   m_PrefabAsset: {fileID: 0}
 --- !u!212 &2121728728 stripped
@@ -2933,6 +2969,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2102707130}
+    - target: {fileID: 233696965173918517, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 248576257054339495, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: m_Camera
       value: 
@@ -2953,6 +2993,10 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1544344881}
+    - target: {fileID: 1309307730600352841, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1814202325599114136, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -16.35524
@@ -2997,38 +3041,106 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1541006513}
+    - target: {fileID: 2020185804131166645, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2020185804131166645, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2313752685283012943, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1886725048}
+    - target: {fileID: 2313752685283012943, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2710955700866523412, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1528077751}
+    - target: {fileID: 2710955700866523412, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2749560343284721213, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 38940494}
+    - target: {fileID: 2749560343284721213, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2823365792907540492, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: m_Name
       value: Fungus
+      objectReference: {fileID: 0}
+    - target: {fileID: 3301224133318783396, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3548741101373985269, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1082450717}
+    - target: {fileID: 3548741101373985269, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: zoom
+      value: 0.94000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: scrollPos.x
+      value: -463.70694
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: scrollPos.y
+      value: 326.89825
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: blockViewHeight
+      value: 400
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: selectedBlocks.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: selectedCommands.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'selectedBlocks.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2885851227104699998}
+    - target: {fileID: 3933778622016426959, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'selectedCommands.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2885851227104699997}
+    - target: {fileID: 4540088898932872086, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 4634836800106867348, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 939098048}
+    - target: {fileID: 4634836800106867348, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4757802776798712616, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1538027782}
+    - target: {fileID: 4886357035649032325, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4985265325319192804, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -3037,22 +3149,42 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 359442246}
+    - target: {fileID: 5055247484347164576, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5121364606346715692, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 981267470}
+    - target: {fileID: 5121364606346715692, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5338850979038978753, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1518720047}
+    - target: {fileID: 5703251288453979189, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5703315125070206154, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1341490872}
+    - target: {fileID: 5703315125070206154, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5722118858087115436, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1186502878}
+    - target: {fileID: 5722118858087115436, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5967402595738147370, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -3069,14 +3201,142 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 2064944714}
+    - target: {fileID: 6445891795430708442, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: nodeRect.x
+      value: 523.0403
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: nodeRect.y
+      value: -213.77307
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: commandList.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2885851227104700070}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2885851227104700031}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2885851227104700028}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2885851227104700068}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2885851227104700071}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2885851227104700072}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2885851227104700067}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2885851227104700066}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[8]'
+      value: 
+      objectReference: {fileID: 2885851227104700073}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[9]'
+      value: 
+      objectReference: {fileID: 2885851227104700065}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[10]'
+      value: 
+      objectReference: {fileID: 2885851227104700069}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[11]'
+      value: 
+      objectReference: {fileID: 2885851227104700030}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[12]'
+      value: 
+      objectReference: {fileID: 2885851227104700064}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[13]'
+      value: 
+      objectReference: {fileID: 2885851227104700062}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[14]'
+      value: 
+      objectReference: {fileID: 2885851227104700027}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[15]'
+      value: 
+      objectReference: {fileID: 2885851227104700063}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[16]'
+      value: 
+      objectReference: {fileID: 2885851227104700029}
+    - target: {fileID: 6478161098022930398, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[17]'
+      value: 
+      objectReference: {fileID: 2885851227104700026}
     - target: {fileID: 6595077218963496120, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 962848855}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: nodeRect.x
+      value: 520.3712
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: nodeRect.y
+      value: -155.62717
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: commandList.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2885851227104700059}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2885851227104700058}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2885851227104700061}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2885851227104700057}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2885851227104700060}
+    - target: {fileID: 6640275805357848620, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2885851227104700032}
     - target: {fileID: 6767008036670015548, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 395125875}
+    - target: {fileID: 6767008036670015548, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6843902736725509856, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
@@ -3085,10 +3345,26 @@ PrefabInstance:
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 346405547}
+    - target: {fileID: 6869337962697505063, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6903063112801770949, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 6982042131138419982, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 90207458}
+    - target: {fileID: 6982042131138419982, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7197029612056570858, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7504722629758854909, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: m_Camera
       value: 
@@ -3096,36 +3372,1810 @@ PrefabInstance:
     - target: {fileID: 7619136909261215833, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
-      objectReference: {fileID: 1818011275}
+      objectReference: {fileID: 2107930677}
+    - target: {fileID: 7619136909261215833, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8051691250575043621, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 106465148}
+    - target: {fileID: 8051691250575043621, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8054283807701597863, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8556000767192550309, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 53810765}
+    - target: {fileID: 8556000767192550309, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8570873078540521640, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8817077599803390304, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 8841080662532496353, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1248516768}
+    - target: {fileID: 8841080662532496353, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8950423875214681912, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 693971098}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: commandList.Array.size
+      value: 51
+      objectReference: {fileID: 0}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2885851227104700056}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2885851227104700024}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2885851227104700023}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[3]'
+      value: 
+      objectReference: {fileID: 2885851227104700055}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[4]'
+      value: 
+      objectReference: {fileID: 2885851227104700022}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[5]'
+      value: 
+      objectReference: {fileID: 2885851227104700021}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[6]'
+      value: 
+      objectReference: {fileID: 2885851227104700054}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[7]'
+      value: 
+      objectReference: {fileID: 2885851227104700020}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[8]'
+      value: 
+      objectReference: {fileID: 2885851227104700019}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[9]'
+      value: 
+      objectReference: {fileID: 2885851227104700053}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[10]'
+      value: 
+      objectReference: {fileID: 2885851227104700018}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[11]'
+      value: 
+      objectReference: {fileID: 2885851227104700017}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[12]'
+      value: 
+      objectReference: {fileID: 2885851227104700052}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[13]'
+      value: 
+      objectReference: {fileID: 2885851227104700016}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[14]'
+      value: 
+      objectReference: {fileID: 2885851227104700015}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[15]'
+      value: 
+      objectReference: {fileID: 2885851227104700051}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[16]'
+      value: 
+      objectReference: {fileID: 2885851227104700014}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[17]'
+      value: 
+      objectReference: {fileID: 2885851227104700013}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[18]'
+      value: 
+      objectReference: {fileID: 2885851227104700050}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[19]'
+      value: 
+      objectReference: {fileID: 2885851227104700049}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[20]'
+      value: 
+      objectReference: {fileID: 2885851227104700012}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[21]'
+      value: 
+      objectReference: {fileID: 2885851227104700048}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[22]'
+      value: 
+      objectReference: {fileID: 2885851227104700047}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[23]'
+      value: 
+      objectReference: {fileID: 2885851227104700011}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[24]'
+      value: 
+      objectReference: {fileID: 2885851227104700046}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[25]'
+      value: 
+      objectReference: {fileID: 2885851227104700010}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[26]'
+      value: 
+      objectReference: {fileID: 2885851227104700009}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[27]'
+      value: 
+      objectReference: {fileID: 2885851227104700008}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[28]'
+      value: 
+      objectReference: {fileID: 2885851227104700045}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[29]'
+      value: 
+      objectReference: {fileID: 2885851227104700044}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[30]'
+      value: 
+      objectReference: {fileID: 2885851227104700043}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[31]'
+      value: 
+      objectReference: {fileID: 2885851227104700007}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[32]'
+      value: 
+      objectReference: {fileID: 2885851227104700006}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[33]'
+      value: 
+      objectReference: {fileID: 2885851227104700042}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[34]'
+      value: 
+      objectReference: {fileID: 2885851227104700041}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[35]'
+      value: 
+      objectReference: {fileID: 2885851227104700005}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[36]'
+      value: 
+      objectReference: {fileID: 2885851227104700040}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[37]'
+      value: 
+      objectReference: {fileID: 2885851227104700039}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[38]'
+      value: 
+      objectReference: {fileID: 2885851227104700004}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[39]'
+      value: 
+      objectReference: {fileID: 2885851227104700038}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[40]'
+      value: 
+      objectReference: {fileID: 2885851227104700003}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[41]'
+      value: 
+      objectReference: {fileID: 2885851227104700002}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[42]'
+      value: 
+      objectReference: {fileID: 2885851227104700037}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[43]'
+      value: 
+      objectReference: {fileID: 2885851227104700036}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[44]'
+      value: 
+      objectReference: {fileID: 2885851227104700001}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[45]'
+      value: 
+      objectReference: {fileID: 2885851227104700035}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[46]'
+      value: 
+      objectReference: {fileID: 2885851227104700034}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[47]'
+      value: 
+      objectReference: {fileID: 2885851227104700000}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[48]'
+      value: 
+      objectReference: {fileID: 2885851227104700033}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[49]'
+      value: 
+      objectReference: {fileID: 2885851227104699999}
+    - target: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: 'commandList.Array.data[50]'
+      value: 
+      objectReference: {fileID: 2885851227104699997}
     - target: {fileID: 9108114911703943267, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 1634846202}
+    - target: {fileID: 9110080472527846788, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 9199523140152067054, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 721117362}
+    - target: {fileID: 9199523140152067054, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _targetColor.colorVal.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9217234949083409280, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      propertyPath: _duration.floatVal
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700077}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700076}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700075}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700074}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700073}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700072}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700071}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700070}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700069}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700068}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700067}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700066}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700065}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700064}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700063}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700062}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700061}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700060}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700059}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700058}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700057}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700056}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700055}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700054}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700053}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700052}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700051}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700050}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700049}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700048}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700047}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700046}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700044}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700045}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700043}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700042}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700041}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700040}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700039}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700038}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700037}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700036}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700035}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700034}
+    - targetCorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2885851227104700033}
   m_SourcePrefab: {fileID: 100100000, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+--- !u!114 &2885851227104699997 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5722118858087115436, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104699998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8982423259235861299, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Block
+--- !u!114 &2885851227104699999 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8102057816668935964, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700000 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5703315125070206154, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1309307730600352841, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700002 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8556000767192550309, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700003 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7197029612056570858, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700004 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5121364606346715692, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700005 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2710955700866523412, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700006 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6982042131138419982, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8054283807701597863, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9108114911703943267, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700009 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8841080662532496353, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700010 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6903063112801770949, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700011 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2313752685283012943, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700012 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2749560343284721213, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700013 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2020185804131166645, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9217234949083409280, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 233696965173918517, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700016 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8570873078540521640, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700017 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8051691250575043621, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700018 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4886357035649032325, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700019 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6445891795430708442, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700020 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3301224133318783396, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700021 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5055247484347164576, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700022 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8817077599803390304, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700023 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6869337962697505063, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700024 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4540088898932872086, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!1 &2885851227104700025 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1344291235343027751, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2885851227104700026 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9199523140152067054, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700027 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4634836800106867348, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7619136909261215833, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700029 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5703251288453979189, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700030 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6767008036670015548, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700031 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9110080472527846788, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+--- !u!114 &2885851227104700032 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3548741101373985269, guid: da6c8f143a73ac3498119bcfa48184a8, type: 3}
+  m_PrefabInstance: {fileID: 2885851227104699996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+--- !u!114 &2885851227104700033
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 196
+  indentLevel: 0
+  spriteRenderer: {fileID: 1186502878}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700034
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 195
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700035
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 194
+  indentLevel: 0
+  spriteRenderer: {fileID: 1341490872}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700036
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 193
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700037
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 192
+  indentLevel: 0
+  spriteRenderer: {fileID: 1544344881}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700038
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 191
+  indentLevel: 0
+  spriteRenderer: {fileID: 53810765}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700039
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 190
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700040
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 189
+  indentLevel: 0
+  spriteRenderer: {fileID: 981267470}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700041
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 188
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700042
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 187
+  indentLevel: 0
+  spriteRenderer: {fileID: 1528077751}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700043
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 186
+  indentLevel: 0
+  spriteRenderer: {fileID: 90207458}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700044
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 184
+  indentLevel: 0
+  spriteRenderer: {fileID: 1634846202}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 0}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700045
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 185
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700046
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 183
+  indentLevel: 0
+  spriteRenderer: {fileID: 1248516768}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700047
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 182
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700048
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 181
+  indentLevel: 0
+  spriteRenderer: {fileID: 1886725048}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700049
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 180
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700050
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 179
+  indentLevel: 0
+  spriteRenderer: {fileID: 38940494}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700051
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 178
+  indentLevel: 0
+  spriteRenderer: {fileID: 1541006513}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700052
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 177
+  indentLevel: 0
+  spriteRenderer: {fileID: 2102707130}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700053
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 176
+  indentLevel: 0
+  spriteRenderer: {fileID: 106465148}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700054
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 175
+  indentLevel: 0
+  spriteRenderer: {fileID: 2064944714}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700055
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 174
+  indentLevel: 0
+  spriteRenderer: {fileID: 359442246}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700056
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 173
+  indentLevel: 0
+  spriteRenderer: {fileID: 346405547}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700057
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 172
+  indentLevel: 0
+  spriteRenderer: {fileID: 1082450717}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700058
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 171
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700059
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 170
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930678}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700060
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 169
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700061
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 168
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930678}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 0}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700062
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 167
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700063
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 166
+  indentLevel: 0
+  spriteRenderer: {fileID: 721117362}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700064
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 165
+  indentLevel: 0
+  spriteRenderer: {fileID: 939098048}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700065
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 164
+  indentLevel: 0
+  spriteRenderer: {fileID: 395125875}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700066
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 163
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700067
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 162
+  indentLevel: 0
+  spriteRenderer: {fileID: 1818011275}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700068
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 161
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930676}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700069
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 160
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700070
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 159
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930677}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700071
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 158
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 1.5
+  durationOLD: 0
+--- !u!114 &2885851227104700072
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 157
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930676}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 0}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700073
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 156
+  indentLevel: 0
+  spriteRenderer: {fileID: 1818011275}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 0}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700074
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 155
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930675}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700075
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Wait
+  itemId: 154
+  indentLevel: 0
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 3
+  durationOLD: 0
+--- !u!114 &2885851227104700076
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
+  itemId: 153
+  indentLevel: 0
+  spriteRenderer: {fileID: 2107930675}
+  _duration:
+    floatRef: {fileID: 0}
+    floatVal: 0
+  _targetColor:
+    colorRef: {fileID: 0}
+    colorVal: {r: 1, g: 1, b: 1, a: 1}
+  waitUntilFinished: 1
+  durationOLD: 0
+  targetColorOLD: {r: 0, g: 0, b: 0, a: 0}
+--- !u!114 &2885851227104700077
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2885851227104700025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Fungus::Fungus.Block
+  nodeRect:
+    serializedVersion: 2
+    x: 524.91376
+    y: -256.58035
+    width: 74.007996
+    height: 40
+  tint: {r: 1, g: 1, b: 1, a: 1}
+  useCustomTint: 0
+  itemId: 152
+  blockName: "\u5988\u5988"
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 2885851227104700074}
+  - {fileID: 2885851227104700075}
+  - {fileID: 2885851227104700076}
+  suppressAllAutoSelections: 0
 --- !u!1001 &6642018479539137108
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3134,6 +5184,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 457037190446930874, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 459846451652649522, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 867413202509560376, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1224609302473613309, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1269757752640216215, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1570622619797046802, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1753432464452270301, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -50.82
@@ -3174,9 +5248,69 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2180803512067948229, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2438553852207940874, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2835436014912282300, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3285176576698397029, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3844486003650232832, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898827296095529857, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6056545554759178277, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6294720384219026805, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6463125409003794953, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6586873784250010455, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7290626221450062635, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574152631222430879, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7941084548297649766, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8055475127760602170, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8736181081943436187, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9209303265636299716, guid: 90b1004051673af4a8a6fdbc635eabf2, type: 3}
+      propertyPath: m_Color.a
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
