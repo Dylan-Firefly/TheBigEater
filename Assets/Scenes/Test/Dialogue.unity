@@ -218,8 +218,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f9a4c0bc96f4cd1a76e6af7d65f0f31, type: 3}
-  m_Name:
-  m_EditorClassIdentifier:
+  m_Name: 
+  m_EditorClassIdentifier: 
   hintImage: {fileID: 349305986}
   canvasGroup: {fileID: 349305988}
   itemHints:

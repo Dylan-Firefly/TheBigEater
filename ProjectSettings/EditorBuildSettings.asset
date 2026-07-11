@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/StreamGameplay.unity
     guid: 6e6cbb056692ad8478e6b84045aee38b
   - enabled: 1
-    path: Assets/Scenes/OtherWorld.unity
+    path: Assets/Scenes/MainStreet.unity
     guid: c0b90a204117cb64fbb63467f2144814
   - enabled: 1
     path: Assets/Scenes/MarketScene.unity
