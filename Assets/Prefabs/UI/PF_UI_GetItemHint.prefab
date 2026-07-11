@@ -104,6 +104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hintImage: {fileID: 8135021463800000013}
   canvasGroup: {fileID: 8135021463800000014}
+  hintAnimator: {fileID: 7885543498055144909}
   itemHints:
   - itemId: pork_belly
     sprite: {fileID: 430708438554321228, guid: 76ccf79c84ba37247b39dbc3866837a0, type: 3}
@@ -126,6 +127,10 @@ MonoBehaviour:
   resizeToSpriteRect: 1
   useUnscaledTime: 1
   logMissingItem: 1
+  replayAnimatorOnShow: 1
+  showStateName: Appear
+  showStateLayerIndex: 0
+  letAnimatorHandleHide: 1
   debugItemId: egg
 --- !u!95 &7885543498055144909
 Animator:
@@ -135,7 +140,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8135021463800000010}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 1ce1aa5cc1bbb304c85def10cda2d470, type: 2}
   m_CullingMode: 0

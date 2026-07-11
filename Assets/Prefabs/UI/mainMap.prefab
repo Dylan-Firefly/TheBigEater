@@ -885,6 +885,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u9648\u7237\u7237"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 0
+  itemHint: {fileID: 0}
+  rewardItemId:
+  rewardHintSpriteOverride: {fileID: 0}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &1369600559037832040
 GameObject:
   m_ObjectHideFlags: 0
@@ -4193,6 +4202,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u5988\u5988"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 1
+  itemHint: {fileID: 0}
+  rewardItemId: recipe
+  rewardHintSpriteOverride: {fileID: -3650470979262217819, guid: cc2f77f45659e5f4cad714b281602667, type: 3}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &7169202693042534714
 GameObject:
   m_ObjectHideFlags: 0
@@ -5128,6 +5146,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u5C0F\u7537\u5B69"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 0
+  itemHint: {fileID: 0}
+  rewardItemId:
+  rewardHintSpriteOverride: {fileID: 0}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &8963725782968147421
 GameObject:
   m_ObjectHideFlags: 0
@@ -5309,6 +5336,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u6751\u59D4"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 0
+  itemHint: {fileID: 0}
+  rewardItemId:
+  rewardHintSpriteOverride: {fileID: 0}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &9099165504670512799
 GameObject:
   m_ObjectHideFlags: 0

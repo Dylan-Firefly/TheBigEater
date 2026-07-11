@@ -181,6 +181,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u5356\u852C\u83DC\u963F\u59E8"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 1
+  itemHint: {fileID: 0}
+  rewardItemId: mushroom
+  rewardHintSpriteOverride: {fileID: 2018507859888493145, guid: 9d2541b5fe820b6429c8803767f7ad9c, type: 3}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &1276443052770794743
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,6 +371,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u5C0F\u5973\u5B69"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 1
+  itemHint: {fileID: 0}
+  rewardItemId: apple
+  rewardHintSpriteOverride: {fileID: -990624257938835317, guid: 6b42a6fb35a8f3140a27a6d55839e77a, type: 3}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &1338203428944233946
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,6 +561,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u6742\u8D27\u94FA\u963F\u59E8"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 1
+  itemHint: {fileID: 0}
+  rewardItemId: dried_tofu
+  rewardHintSpriteOverride: {fileID: 7528875466763666245, guid: dffb5343f3cd9b049bc44b3380e99386, type: 3}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &1397476329141459989
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +842,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u7F57\u6C49\u679C\u8001\u5934"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 0
+  itemHint: {fileID: 0}
+  rewardItemId:
+  rewardHintSpriteOverride: {fileID: 0}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &2151923531419694445
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1703,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u732A\u8089\u4F6C"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 0
+  itemHint: {fileID: 0}
+  rewardItemId:
+  rewardHintSpriteOverride: {fileID: 0}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &7021142002584064330
 GameObject:
   m_ObjectHideFlags: 0
@@ -1971,6 +2016,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u6C34\u751F"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 0
+  itemHint: {fileID: 0}
+  rewardItemId:
+  rewardHintSpriteOverride: {fileID: 0}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &8274184773410763868
 GameObject:
   m_ObjectHideFlags: 0
@@ -2243,6 +2297,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::npcDialog
   pen: "\u8001\u5976\u5976"
+  flowchart: {fileID: 0}
+  fallbackFlowchartName: mainMapFlowchart
+  disableInteractionAfterComplete: 1
+  grantsItemOnComplete: 1
+  itemHint: {fileID: 0}
+  rewardItemId: apple
+  rewardHintSpriteOverride: {fileID: -990624257938835317, guid: 6b42a6fb35a8f3140a27a6d55839e77a, type: 3}
+  itemHintDelaySeconds: 0
+  showRewardOnlyOnce: 1
 --- !u!1 &8675544187410552919
 GameObject:
   m_ObjectHideFlags: 0

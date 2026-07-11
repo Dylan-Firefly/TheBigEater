@@ -17,6 +17,7 @@ public class GetItemHintController : MonoBehaviour
     [Header("UI")]
     [SerializeField] private Image hintImage;
     [SerializeField] private CanvasGroup canvasGroup;
+    [SerializeField] private Animator hintAnimator;
 
     [Header("Item Hint Data")]
     [SerializeField] private List<ItemHintEntry> itemHints = new List<ItemHintEntry>();
@@ -27,6 +28,12 @@ public class GetItemHintController : MonoBehaviour
     [SerializeField] private bool resizeToSpriteRect = true;
     [SerializeField] private bool useUnscaledTime = true;
     [SerializeField] private bool logMissingItem = true;
+
+    [Header("Animation")]
+    [SerializeField] private bool replayAnimatorOnShow = true;
+    [SerializeField] private string showStateName = "Appear";
+    [SerializeField] private int showStateLayerIndex;
+    [SerializeField] private bool letAnimatorHandleHide = true;
 
     [Header("Debug")]
     [SerializeField] private string debugItemId = "egg";
@@ -129,6 +136,13 @@ public class GetItemHintController : MonoBehaviour
         }
 
         SetVisible(true);
+        bool playedAnimation = PlayShowAnimation();
+        if (playedAnimation && letAnimatorHandleHide)
+        {
+            StopAutoHide();
+            return;
+        }
+
         RestartAutoHide(visibleSeconds);
     }
 
@@ -186,6 +200,11 @@ public class GetItemHintController : MonoBehaviour
 
     private void HideImmediate()
     {
+        if (hintAnimator != null)
+        {
+            hintAnimator.enabled = false;
+        }
+
         SetVisible(false);
     }
 
@@ -233,5 +252,40 @@ public class GetItemHintController : MonoBehaviour
         {
             canvasGroup = GetComponent<CanvasGroup>();
         }
+
+        if (hintAnimator == null)
+        {
+            hintAnimator = GetComponent<Animator>();
+        }
+    }
+
+    private bool PlayShowAnimation()
+    {
+        if (!replayAnimatorOnShow || hintAnimator == null || string.IsNullOrWhiteSpace(showStateName))
+        {
+            return false;
+        }
+
+        bool wasEnabled = hintAnimator.enabled;
+        hintAnimator.enabled = true;
+
+        int stateHash = Animator.StringToHash(showStateName);
+        int fullPathHash = Animator.StringToHash("Base Layer." + showStateName);
+        if (hintAnimator.HasState(showStateLayerIndex, stateHash))
+        {
+            hintAnimator.Play(stateHash, showStateLayerIndex, 0f);
+            hintAnimator.Update(0f);
+            return true;
+        }
+
+        if (hintAnimator.HasState(showStateLayerIndex, fullPathHash))
+        {
+            hintAnimator.Play(fullPathHash, showStateLayerIndex, 0f);
+            hintAnimator.Update(0f);
+            return true;
+        }
+
+        hintAnimator.enabled = wasEnabled;
+        return false;
     }
 }

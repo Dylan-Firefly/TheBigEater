@@ -8,8 +8,8 @@ public class SceneLoader : MonoBehaviour
     [Header("Scene Names")]
     [SerializeField] private string mainMenuScene = "MainMenu";
     [SerializeField] private string openingStreamingScene = "OpeningStreaming";
-    [SerializeField] private string countrysideScene = "OtherWorld";
-    [SerializeField] private string otherWorldScene = "OtherWorld";
+    [SerializeField] private string countrysideScene = "MainStreet";
+    [SerializeField] private string otherWorldScene = "MainStreet";
     [SerializeField] private string marketScene = "MarketScene";
     [SerializeField] private string indoorScene = "IndoorScene";
     [SerializeField] private string liveStreamGameplayScene = "StreamGameplay";
