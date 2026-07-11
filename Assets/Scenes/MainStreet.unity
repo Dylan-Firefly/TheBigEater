@@ -1215,6 +1215,14 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 693971098}
+    - target: {fileID: 3635351303091241371, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 876
+      objectReference: {fileID: 0}
+    - target: {fileID: 3635351303091241371, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 381
+      objectReference: {fileID: 0}
     - target: {fileID: 4023077805154957165, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: itemHint
       value: 
@@ -1265,11 +1273,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5937971902280582695, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8319939944565899743, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Name
       value: mainMap
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852097221329775708, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_text
+      value: "\u83DC\u5E02\u573A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852097221329775708, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_fontSize
+      value: 280.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852097221329775708, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_margin.z
+      value: 185.0418
+      objectReference: {fileID: 0}
+    - target: {fileID: 8852097221329775708, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 280.14
       objectReference: {fileID: 0}
     - target: {fileID: 9112917355033956675, guid: 006a66e49b12a144c8c46e5287b27d2c, type: 3}
       propertyPath: m_Camera
@@ -2651,7 +2675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 191
+  itemId: 236
   indentLevel: 0
   spriteRenderer: {fileID: 53810765}
   _duration:
@@ -2675,7 +2699,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 190
+  itemId: 235
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -2693,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 189
+  itemId: 234
   indentLevel: 0
   spriteRenderer: {fileID: 981267470}
   _duration:
@@ -2717,7 +2741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 188
+  itemId: 233
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -2735,7 +2759,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 187
+  itemId: 232
   indentLevel: 0
   spriteRenderer: {fileID: 1528077751}
   _duration:
@@ -2759,7 +2783,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 186
+  itemId: 231
   indentLevel: 0
   spriteRenderer: {fileID: 90207458}
   _duration:
@@ -2783,7 +2807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 184
+  itemId: 229
   indentLevel: 0
   spriteRenderer: {fileID: 1634846202}
   _duration:
@@ -2807,7 +2831,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 185
+  itemId: 230
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -2825,7 +2849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 183
+  itemId: 228
   indentLevel: 0
   spriteRenderer: {fileID: 1248516768}
   _duration:
@@ -2849,7 +2873,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 182
+  itemId: 227
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -2867,7 +2891,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 181
+  itemId: 226
   indentLevel: 0
   spriteRenderer: {fileID: 1886725048}
   _duration:
@@ -2891,7 +2915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 180
+  itemId: 225
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -2909,7 +2933,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 179
+  itemId: 224
   indentLevel: 0
   spriteRenderer: {fileID: 38940494}
   _duration:
@@ -2933,7 +2957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 178
+  itemId: 223
   indentLevel: 0
   spriteRenderer: {fileID: 1541006513}
   _duration:
@@ -2957,7 +2981,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 177
+  itemId: 222
   indentLevel: 0
   spriteRenderer: {fileID: 2102707130}
   _duration:
@@ -2981,7 +3005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 176
+  itemId: 221
   indentLevel: 0
   spriteRenderer: {fileID: 106465148}
   _duration:
@@ -3005,7 +3029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 175
+  itemId: 220
   indentLevel: 0
   spriteRenderer: {fileID: 2064944714}
   _duration:
@@ -3029,7 +3053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 174
+  itemId: 219
   indentLevel: 0
   spriteRenderer: {fileID: 359442246}
   _duration:
@@ -3053,7 +3077,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 173
+  itemId: 218
   indentLevel: 0
   spriteRenderer: {fileID: 346405547}
   _duration:
@@ -3077,7 +3101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 172
+  itemId: 217
   indentLevel: 0
   spriteRenderer: {fileID: 1082450717}
   _duration:
@@ -3101,7 +3125,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 171
+  itemId: 216
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3119,7 +3143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 170
+  itemId: 215
   indentLevel: 0
   spriteRenderer: {fileID: 2107930678}
   _duration:
@@ -3143,7 +3167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 169
+  itemId: 214
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3161,7 +3185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 168
+  itemId: 213
   indentLevel: 0
   spriteRenderer: {fileID: 2107930678}
   _duration:
@@ -3185,7 +3209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 167
+  itemId: 212
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3203,7 +3227,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 166
+  itemId: 211
   indentLevel: 0
   spriteRenderer: {fileID: 721117362}
   _duration:
@@ -3227,7 +3251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 165
+  itemId: 210
   indentLevel: 0
   spriteRenderer: {fileID: 939098048}
   _duration:
@@ -3251,7 +3275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 164
+  itemId: 209
   indentLevel: 0
   spriteRenderer: {fileID: 395125875}
   _duration:
@@ -3275,7 +3299,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 163
+  itemId: 208
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3293,7 +3317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 162
+  itemId: 207
   indentLevel: 0
   spriteRenderer: {fileID: 1818011275}
   _duration:
@@ -3317,7 +3341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 161
+  itemId: 206
   indentLevel: 0
   spriteRenderer: {fileID: 2107930676}
   _duration:
@@ -3341,7 +3365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 160
+  itemId: 205
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3359,7 +3383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 159
+  itemId: 204
   indentLevel: 0
   spriteRenderer: {fileID: 2107930677}
   _duration:
@@ -3383,7 +3407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 158
+  itemId: 203
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3401,7 +3425,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 157
+  itemId: 202
   indentLevel: 0
   spriteRenderer: {fileID: 2107930676}
   _duration:
@@ -3425,7 +3449,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 156
+  itemId: 201
   indentLevel: 0
   spriteRenderer: {fileID: 1818011275}
   _duration:
@@ -3449,7 +3473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 155
+  itemId: 200
   indentLevel: 0
   spriteRenderer: {fileID: 2107930675}
   _duration:
@@ -3473,7 +3497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3315ad2ebb85443909a1203d56d9344e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.Wait
-  itemId: 154
+  itemId: 199
   indentLevel: 0
   _duration:
     floatRef: {fileID: 0}
@@ -3491,7 +3515,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: accc065c3e9a6457496f075b1bd49adc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Fungus::Fungus.FadeSprite
-  itemId: 153
+  itemId: 198
   indentLevel: 0
   spriteRenderer: {fileID: 2107930675}
   _duration:
