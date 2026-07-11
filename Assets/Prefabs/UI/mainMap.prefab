@@ -888,6 +888,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: main_street_chen_grandpa
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 0
   itemHint: {fileID: 0}
   rewardItemId:
@@ -4205,6 +4209,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: main_street_mother
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: recipe
@@ -5149,6 +5157,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: main_street_little_boy
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 0
   itemHint: {fileID: 0}
   rewardItemId:
@@ -5339,6 +5351,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: main_street_village_committee
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 0
   itemHint: {fileID: 0}
   rewardItemId:

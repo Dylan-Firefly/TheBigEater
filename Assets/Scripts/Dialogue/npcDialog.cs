@@ -1,5 +1,6 @@
 using Fungus;
 using System.Collections;
+using TheBigEater.Gameplay.Player;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Serialization;
@@ -14,6 +15,12 @@ public class npcDialog : MonoBehaviour
 
     [Header("Completion")]
     [SerializeField] private bool disableInteractionAfterComplete = true;
+    [SerializeField] private bool rememberCompletionAcrossScenes = true;
+    [SerializeField] private string completionId;
+
+    [Header("Player Input")]
+    [SerializeField] private bool lockPlayerInputDuringDialogue = true;
+    [SerializeField] private PlayerController playerController;
 
     [Header("Reward Hint")]
     [FormerlySerializedAs("showItemHintOnComplete")]
@@ -33,9 +40,20 @@ public class npcDialog : MonoBehaviour
     private bool isDialogueRunning;
     private bool dialogueCompleted;
     private bool itemHintShown;
+    private bool ownsPlayerInputLock;
     private Coroutine itemHintRoutine;
 
     private bool InteractionLocked => disableInteractionAfterComplete && dialogueCompleted;
+
+    private void Awake()
+    {
+        RestoreCompletionState();
+    }
+
+    private void OnDisable()
+    {
+        ReleasePlayerInputLock();
+    }
 
     private void OnTriggerStay2D(Collider2D collision)
     {
@@ -79,10 +97,12 @@ public class npcDialog : MonoBehaviour
 
         Block block = targetFlowchart.FindBlock(pen);
         isDialogueRunning = true;
+        AcquirePlayerInputLock();
         bool started = targetFlowchart.ExecuteBlock(block, 0, HandleDialogueComplete);
         if (!started)
         {
             isDialogueRunning = false;
+            ReleasePlayerInputLock();
             Debug.LogWarning($"[npcDialog] Fungus block '{pen}' could not start.", this);
             return;
         }
@@ -93,10 +113,82 @@ public class npcDialog : MonoBehaviour
     private void HandleDialogueComplete()
     {
         isDialogueRunning = false;
+        ReleasePlayerInputLock();
         dialogueCompleted = true;
         canChat = false;
+        RememberDialogueCompletion();
         ShowRewardHint();
         onDialogueComplete?.Invoke();
+    }
+
+    private void RestoreCompletionState()
+    {
+        if (!rememberCompletionAcrossScenes)
+        {
+            return;
+        }
+
+        dialogueCompleted = GameManager.EnsureInstance().IsDialogueCompleted(GetCompletionId());
+        if (dialogueCompleted)
+        {
+            canChat = false;
+            itemHintShown = true;
+        }
+    }
+
+    private void RememberDialogueCompletion()
+    {
+        if (rememberCompletionAcrossScenes)
+        {
+            GameManager.EnsureInstance().MarkDialogueCompleted(GetCompletionId());
+        }
+    }
+
+    private string GetCompletionId()
+    {
+        return string.IsNullOrWhiteSpace(completionId) ? pen : completionId;
+    }
+
+    private void AcquirePlayerInputLock()
+    {
+        if (!lockPlayerInputDuringDialogue || ownsPlayerInputLock)
+        {
+            return;
+        }
+
+        PlayerController targetPlayer = ResolvePlayerController();
+        if (targetPlayer == null)
+        {
+            return;
+        }
+
+        targetPlayer.AcquireInputLock();
+        ownsPlayerInputLock = true;
+    }
+
+    private void ReleasePlayerInputLock()
+    {
+        if (!ownsPlayerInputLock)
+        {
+            return;
+        }
+
+        if (playerController != null)
+        {
+            playerController.ReleaseInputLock();
+        }
+
+        ownsPlayerInputLock = false;
+    }
+
+    private PlayerController ResolvePlayerController()
+    {
+        if (playerController == null)
+        {
+            playerController = Object.FindFirstObjectByType<PlayerController>();
+        }
+
+        return playerController;
     }
 
     private void ShowRewardHint()

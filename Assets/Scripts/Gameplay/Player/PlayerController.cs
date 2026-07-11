@@ -15,6 +15,9 @@ namespace TheBigEater.Gameplay.Player
         [SerializeField] private bool flipSpriteByHorizontalInput = true;
 
         private global::InputSystem_Actions inputActions;
+        private int inputLockCount;
+
+        public bool InputLocked => inputLockCount > 0;
 
         private void Awake()
         {
@@ -32,7 +35,7 @@ namespace TheBigEater.Gameplay.Player
 
         private void OnEnable()
         {
-            inputActions?.Player.Enable();
+            ApplyInputState();
         }
 
         private void OnDisable()
@@ -47,10 +50,26 @@ namespace TheBigEater.Gameplay.Player
 
         private void Update()
         {
-            Vector2 moveInput = ReadMoveInput();
+            Vector2 moveInput = InputLocked ? Vector2.zero : ReadMoveInput();
             Move(moveInput);
             UpdateAnimation(moveInput);
             UpdateFacing(moveInput);
+        }
+
+        public void AcquireInputLock()
+        {
+            inputLockCount++;
+            ApplyInputState();
+        }
+
+        public void ReleaseInputLock()
+        {
+            if (inputLockCount > 0)
+            {
+                inputLockCount--;
+            }
+
+            ApplyInputState();
         }
 
         private Vector2 ReadMoveInput()
@@ -82,6 +101,28 @@ namespace TheBigEater.Gameplay.Player
             if (flipSpriteByHorizontalInput && spriteRenderer != null && Mathf.Abs(moveInput.x) > 0.01f)
             {
                 spriteRenderer.flipX = moveInput.x < 0f;
+            }
+        }
+
+        private void ApplyInputState()
+        {
+            if (inputActions == null)
+            {
+                return;
+            }
+
+            if (isActiveAndEnabled && !InputLocked)
+            {
+                inputActions.Player.Enable();
+            }
+            else
+            {
+                inputActions.Player.Disable();
+            }
+
+            if (InputLocked)
+            {
+                UpdateAnimation(Vector2.zero);
             }
         }
     }

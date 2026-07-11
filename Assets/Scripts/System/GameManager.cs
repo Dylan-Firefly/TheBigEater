@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 [DisallowMultipleComponent]
@@ -10,6 +12,7 @@ public class GameManager : MonoBehaviour
 
     private bool phoneGameplayUnlocked;
     private bool openPhoneOnNextIndoorLoad;
+    private readonly HashSet<string> completedDialogueIds = new HashSet<string>(StringComparer.Ordinal);
 
     public GameFlowState State { get; private set; } = GameFlowState.None;
     public bool PhoneGameplayUnlocked => phoneGameplayUnlocked;
@@ -151,10 +154,24 @@ public class GameManager : MonoBehaviour
         Debug.Log($"[GameManager] State -> {state}");
     }
 
+    public bool IsDialogueCompleted(string completionId)
+    {
+        return !string.IsNullOrWhiteSpace(completionId) && completedDialogueIds.Contains(completionId);
+    }
+
+    public void MarkDialogueCompleted(string completionId)
+    {
+        if (!string.IsNullOrWhiteSpace(completionId))
+        {
+            completedDialogueIds.Add(completionId);
+        }
+    }
+
     private void ResetDemoProgress()
     {
         phoneGameplayUnlocked = false;
         openPhoneOnNextIndoorLoad = false;
+        completedDialogueIds.Clear();
     }
 
     private SceneLoader SceneLoader

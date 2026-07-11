@@ -184,6 +184,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_vegetable_seller
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: mushroom
@@ -377,6 +381,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_little_girl
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: apple
@@ -570,6 +578,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_grocery_seller
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: egg
@@ -854,6 +866,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_luohanguo_elder
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 0
   itemHint: {fileID: 0}
   rewardItemId: 
@@ -1718,6 +1734,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_pork_seller
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: pork
@@ -2034,6 +2054,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_shuisheng
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: wuchang_fish
@@ -2318,6 +2342,10 @@ MonoBehaviour:
   flowchart: {fileID: 0}
   fallbackFlowchartName: mainMapFlowchart
   disableInteractionAfterComplete: 1
+  rememberCompletionAcrossScenes: 1
+  completionId: market_grandma
+  lockPlayerInputDuringDialogue: 1
+  playerController: {fileID: 0}
   grantsItemOnComplete: 1
   itemHint: {fileID: 0}
   rewardItemId: apple
