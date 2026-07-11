@@ -1,6 +1,7 @@
 using Fungus;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Serialization;
 
 public class npcDialog : MonoBehaviour
@@ -24,6 +25,9 @@ public class npcDialog : MonoBehaviour
     [SerializeField, Min(0f)] private float itemHintDelaySeconds;
     [FormerlySerializedAs("showItemHintOnlyOnce")]
     [SerializeField] private bool showRewardOnlyOnce = true;
+
+    [Header("Events")]
+    [SerializeField] private UnityEvent onDialogueComplete = new UnityEvent();
 
     private bool canChat;
     private bool isDialogueRunning;
@@ -92,6 +96,7 @@ public class npcDialog : MonoBehaviour
         dialogueCompleted = true;
         canChat = false;
         ShowRewardHint();
+        onDialogueComplete?.Invoke();
     }
 
     private void ShowRewardHint()
